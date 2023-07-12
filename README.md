@@ -18,3 +18,6 @@ Luis Mamaní
 Candela Jesabel Almaraz
 María José Tolaba
 Díaz Quispia, Julián Leandro
+
+Buscar inspiración en referentes de Mercado.
+MERCADO LIBRE: Nos inspiramos a partir de su sitio debido a la estetica y funcionalidades que llega a presentar, tales como el estado del producto (usado o nuevo), como las distintas apreciaciones explayadas de los usuarios que proveen una mejor seguridad respecto a las ofertas de los distintos vendedores. Vale recalcar que este está bastante guiado al armado del detalle del producto, el cual lo refleja de forma completa, coherente y consisa.
