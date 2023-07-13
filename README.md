@@ -28,7 +28,7 @@ Mi nombre es Agustina Yael Mendoza, soy nueva integrante del grupo 4 de la cursa
 
 ## Referentes del Mercado.
 1. MERCADO LIBRE: Nos inspiramos a partir de su sitio debido a la estetica y funcionalidades que llega a presentar, tales como el estado del producto (usado o nuevo), como las distintas apreciaciones explayadas de los usuarios que proveen una mejor seguridad respecto a las ofertas de los distintos vendedores. Vale recalcar que este está bastante guiado al armado del detalle del producto, el cual lo refleja de forma completa, coherente y consisa.
-2. 
-3.
+2. MAXIMUS: Nos inspiramos para hacer casi todo el diseño del carrito. Armando en un contenedor cada producto en fila de los que se vaya añadiendo señalando la imagen y descripción del producto, la cantidad necesitada, un subtotal y la opción de eliminar. Y otro contenedor en donde se calcule el total entre los productos, descuentos, envíos, etc. Y también nos inspiramos del sitio para hacer el wireframe del login siendo un diseño legible, sencillo y práctico. Con elementos como ingresar email, contraseña, opciones para registrarse o recupera contraseña y por último un botón de login.
+3. VENEX: Nos gusto la funcionalidad de ingresar un código de cupón para el resumen del pedido en el carrito .
 4.
 5.
