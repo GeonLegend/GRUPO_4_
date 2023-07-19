@@ -1,0 +1,15 @@
+{
+  "name": "ecomerce-dh",
+  "version": "1.0.0",
+  "description": "Página destinada a la venta de productos tecnológicos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Grupo 4 DH, Luis Mamaní, Candela Almaraz, María José Tolaba, Agustina Mendoza, Fran Campos, Díaz Quispia Julián",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
