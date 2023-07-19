@@ -33,5 +33,5 @@ Mi nombre es Agustina Yael Mendoza, soy nueva integrante del grupo 4 de la cursa
 4. FRÁVEGA: Por la estetica y la facilidad en el uso ofreciendo mayor movilidad siendo esta menos compleja al momento de interactuar con el usuario respecto al Home.
 5. COMPRA GAMER: Por el detalle y descripción de cada producto tecnológico siendo este dividido en secciones con los diferentes items a los cuales aplcia el producto dando detalles de cierta relevancia al demandante para evitar equivocaciones o malentendidos en la compra.
 ## Puedes visitar nuestro progreso aqui:
-GitHub: https://github.com/GeonLegend/grupo_4_venta_productos_electronicos.git
-Trello: https://trello.com/invite/b/rw2NyG7v/ATTIbce461c6ef81eab14d356a06949a006423456F9F/tablero-central
+* GitHub: https://github.com/GeonLegend/grupo_4_venta_productos_electronicos.git
+* Trello: https://trello.com/invite/b/rw2NyG7v/ATTIbce461c6ef81eab14d356a06949a006423456F9F/tablero-central
