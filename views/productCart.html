@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-bar__superior">
+                <div class="header-logo">
+                    <a href="/">
+                        <img src="/images/Logo-Página.png" alt="logo" width="100px" height="100px">
+                    </a>
+                </div>
+                <div class="header-search">
+                    <input type="search" placeholder="Buscar productos">
+                    <button>
+                        <img src="/images/search.png" alt="lupa" width="20px" height="20px">
+                    </button>
+                </div>
+                <div class="header-account">
+                    <a href="" class="account-a">
+                        <img src="/images/user.png" alt="usuario" width="30px" height="30px">
+                        <p class="account-p">Ingresar</p>
+                    </a>
+                    <a href="/carrito" class="account-a">
+                        <img src="/images/shopping-cart.png" alt="carrito" width="30px" height="30px">
+                        <p class="account-p">Carrito</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cart-custom">
+            <h1 class="cart-titulo">Carrito</h1>
+            <div class="cart-pedidos">
+                <div class="cart-pedidos__titulo">
+                    <h2>Productos</h2>
+                </div>
+                <div class="cart-pedidos__items">
+                    <section class="cart-item">
+                        <article class="cart-item__producto">
+                            <div class="producto-img">
+                                <img src="/images/playstation5.jpg" alt="imagen del producto" width="100%"
+                                    height="100%">
+                            </div>
+                            <div class="producto-custom">
+                                <h3 class="producto-titulo">Titulo del producto</h3>
+                                <p class="producto-descripcion">Descripcion del producto</p>
+                                <div class="producto-opciones">
+                                    <p>Eliminar</p>
+                                    <p>Guardar</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="cart-item__cantidad">
+                            <button>
+                                <p>-</p>
+                            </button>
+                            <span>0</span>
+                            <button>
+                                <p>+</p>
+                            </button>
+                        </article>
+                        <article class="cart-item__precio">
+                            <p>$00.00</p>
+                        </article>
+                    </section>
+                </div>
+            </div>
+
+            <div class="cart-detalles">
+                <div class="resumen-pedido">
+                    <div class="resumen-pedido__item">
+                        <h3>Resumen del pedido</h3>
+                    </div>
+                    <div class="resumen-pedido__item">
+                        <div>
+                            <p>Productos (0)</p>
+                            <p>Descuento</p>
+                        </div>
+                        <div>
+                            <p>$00.00</p>
+                            <p>$-00.00</p>
+                        </div>
+                    </div>
+                    <div class="resumen-pedido__item">
+                        <div class="resumen-pedido__item-search">
+                            <input type="search" name="" id="" placeholder="Código de cupon">
+                        </div>
+                        <div>
+                            <button class="pedido-btn">Aplicar</button>
+                            <button class="pedido-btn">Quitar</button>
+                        </div>
+                        <p>$-00.00</p>
+                    </div>
+                    <div class="resumen-pedido__item">
+                        <div class="resumen-pedido__item-search">
+                            <input type="search" name="" id="" placeholder="Ingresa código postal">
+                        </div>
+
+                        <p>Envío</p>
+                        <p>$00.00</p>
+                    </div>
+                    <div class="resumen-pedido__item resumen-total">
+                        <p>Total: </p>
+                        <p>$00.00</p>
+                    </div>
+                    <div class="resumen-pedido__item">
+                        <button class="comprar-btn">
+                            Finalizar compra
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mas-productos">
+                    <button class="mas-productos-btn">
+                        Agregar más productos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
