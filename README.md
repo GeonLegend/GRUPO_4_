@@ -25,6 +25,9 @@ Soy María José Tolaba, tengo 16 años. Me gusta leer, voy a una escuela de mú
 Hola, me llamo Díaz Quispia Julián, tengo 18 años y vivo en Abra Pampa, una ciudad ubicada a mas o menos a 250km. de capital. Me gusta la música y leer libros. Me gusta la computación y la informática, pienso seguir más a futuro en este mundo. También suelo practicar en el campo de cultivo como ganadería pero de aficionado. No me gusta ser sociable de forma apresurada, pero siempre quiero sumar nuevos amigos y pasarla bien :).
 ### Agustina Mendoza
 Mi nombre es Agustina Yael Mendoza, soy nueva integrante del grupo 4 de la cursada. Nací en 22 de Agosto tengo 19 años, soy de San Salvador de Jujuy, estoy cursando mis ultimas materias del secundario en la ENET N°1 de mi ciudad para recibirme de Técnica Maestra Mayor de Obras y soy de RIVER 
+### Mauricio Gabriel Maizares
+Mi nombre es Mauricio Gabriel Maizares, tengo 17 años y estudio en el Colegio Fasta San Alberto Magno, vivo en Palpala. En mis tiempos libres me gusta escuchar musica mas que nada trap, tomar mates, jugar videojuegos y entrenar
+### Hola mi nombre es Lautaro Nicolás, me gusta y me interesa el mundo de la tecnología. La mayor parte del tiempo me la paso viendo videos en yutu o alguna película. Estoy cursando mi último año de secundaria en el “Colegio Nacional N°1 Teodoro Sánchez de Bustamante”. Y me gusta jugar juegos en la compu. Fin
 
 ## Referentes del Mercado.
 1. MERCADO LIBRE: Nos inspiramos a partir de su sitio debido a la estetica y funcionalidades que llega a presentar, tales como el estado del producto (usado o nuevo), como las distintas apreciaciones explayadas de los usuarios que proveen una mejor seguridad respecto a las ofertas de los distintos vendedores. Vale recalcar que este está bastante guiado al armado del detalle del producto, el cual lo refleja de forma completa, coherente y consisa.
