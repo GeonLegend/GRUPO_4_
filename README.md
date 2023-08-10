@@ -18,9 +18,6 @@ tendencias electrónicas no sea un problema. Con este sitio los beneficios que b
 Soy estudiante del Polimodal N3 de Jujuy, tengo 17 años y estoy apasionado con el mundo de la tecnología. Me gusta hacer ejercicio, jugar videogames y me entretiene las áreas de electrónica y programación.
 ### Candela Jesabel Almaraz
 Mi nombre es Candela Jesabel Almaraz, estudio en el Colegio Nuestra Señora del Huerto, me gusta escuchar música, dibujar , escribir y leer. Estudios que realizo por aparte del colegio es un curso de programación.
-### María José Tolaba
-Hola, soy María José. Te mando mi descripción:
-Soy María José Tolaba, tengo 16 años. Me gusta leer, voy a una escuela de música y en mis tiempos libres cuido de mis plantas.
 ### Díaz Quispia, Julián Leandro
 Hola, me llamo Díaz Quispia Julián, tengo 18 años y vivo en Abra Pampa, una ciudad ubicada a mas o menos a 250km. de capital. Me gusta la música y leer libros. Me gusta la computación y la informática, pienso seguir más a futuro en este mundo. También suelo practicar en el campo de cultivo como ganadería pero de aficionado. No me gusta ser sociable de forma apresurada, pero siempre quiero sumar nuevos amigos y pasarla bien :).
 ### Agustina Mendoza
