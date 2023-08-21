@@ -26,6 +26,9 @@ Hola, me llamo Díaz Quispia Julián, tengo 18 años y vivo en Abra Pampa, una c
 ### Agustina Mendoza
 Mi nombre es Agustina Yael Mendoza, soy nueva integrante del grupo 4 de la cursada. Nací en 22 de Agosto tengo 19 años, soy de San Salvador de Jujuy, estoy cursando mis ultimas materias del secundario en la ENET N°1 de mi ciudad para recibirme de Técnica Maestra Mayor de Obras y soy de RIVER 
 
+### Mauricio Gabriel Maizares
+Mi nombre es Mauricio Gabriel Maizares, tengo 17 años y estudio en el Colegio Fasta San Alberto Magno, vivo en Palpala. En mis tiempos libres me gusta escuchar musica mas que nada trap, tomar mates, jugar videojuegos y entrenar 
+
 ## Referentes del Mercado.
 1. MERCADO LIBRE: Nos inspiramos a partir de su sitio debido a la estetica y funcionalidades que llega a presentar, tales como el estado del producto (usado o nuevo), como las distintas apreciaciones explayadas de los usuarios que proveen una mejor seguridad respecto a las ofertas de los distintos vendedores. Vale recalcar que este está bastante guiado al armado del detalle del producto, el cual lo refleja de forma completa, coherente y consisa.
 2. MAXIMUS: Nos inspiramos para hacer casi todo el diseño del carrito. Armando en un contenedor cada producto en fila de los que se vaya añadiendo señalando la imagen y descripción del producto, la cantidad necesitada, un subtotal y la opción de eliminar. Y otro contenedor en donde se calcule el total entre los productos, descuentos, envíos, etc. Y también nos inspiramos del sitio para hacer el wireframe del login siendo un diseño legible, sencillo y práctico. Con elementos como ingresar email, contraseña, opciones para registrarse o recupera contraseña y por último un botón de login.
