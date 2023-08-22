@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body input[type="search"] {
+    outline: none;
+}
+
 /* Estilado del header */
 header {
     background-color: #1d1d1d;
@@ -44,7 +48,7 @@ header {
     position: absolute;
     top: 4px;
     right: 5px;
-    /* cursor */
+    cursor: pointer;
 }
 
 .header-account {

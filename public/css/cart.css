@@ -2,6 +2,10 @@ main {
     background-color: #484848;
 }
 
+main button {
+    cursor: pointer
+}
+
 .cart-custom {
     width: 90%;
     margin-left: 5%;
@@ -66,12 +70,10 @@ main {
     font-size: 20px;
     padding: 4px 5px;
     background-color: white;
-    cursor: pointer;
     border: none;
 }
 
 .cart-detalles {
-
     display: flex;
     flex-direction: column;
 }
@@ -82,12 +84,11 @@ main {
 
 .resumen-pedido {
     background-color: #49a078;
-    border: solid black 2px;
+    border-radius: 7px;
 }
 
 .resumen-pedido__item {
     padding:  10px 5px;
-    
 
     display: flex;
     flex-wrap: wrap;
@@ -99,21 +100,32 @@ main {
 .resumen-pedido__item-search {
     width: 100%;
     margin-bottom: 20px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumen-pedido__item-search p {
+    display: inline;
 }
 
 .resumen-pedido__item-search input[type="search"]{
     width: 60%;  
-    padding: 2px 5px;
+    padding: 7px 5px;
     border-radius: 7px;
-}
-.resumen-pedido__item-search input[type="search"]:focus {
-    outline: none;
 }
 
 .pedido-btn {
-    padding: 2px 10px;
-    border-radius: 10px;
-    background-color: #dce1de;
+    position: absolute;
+    right: 42%;
+    top: 6px;
+
+    border: none;
+    border-left: solid black 2px;
+    padding: 2px 6px;
+    background-color: white;
 }
 
 .resumen-total {
@@ -123,14 +135,17 @@ main {
 .comprar-btn {
     margin: 0% 10%;
     width: 80%;
-    padding: 6px 0px;
+    padding: 10px 0px;
     background-color: #dce1de;
+    border: none;
+    border-radius: 4px;
 }
 
 .mas-productos-btn {
     width: 100%;
-    padding: 4px 0px;
+    padding: 8px 0px;
     background-color: #dce1de;
+    border: solid black 2px;
 }
 
 
@@ -144,12 +159,13 @@ main {
     }
 
     .cart-pedidos {
-        width: 55%;
+        width: 62%;
     }
 
     .cart-detalles {
-        width: 40%;
+        width: 35%;
     }
+
 }
 
 /* Estilado desktop */

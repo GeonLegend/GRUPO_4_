@@ -1,0 +1,90 @@
+  p {
+    font-weight: normal;
+    font-size: 10px;
+  }
+
+  .iniciar-sesion {
+    font-size: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .login {
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #dce1de;
+    border-radius: 5px;
+  }
+
+   .bienvenida {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 760px;
+
+  }
+
+  @media (max-width: 480){
+    .bienvenida{
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+  }
+
+  @media (max-width: 1279){
+    .bienvenida{
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+  }
+
+  .login .titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  p {
+    display: inline-block;
+  }
+
+
+.login input[type="submit"] {
+    background-color: #49a078;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login .uno {
+    color: #49a078;
+    font-size: 16px;
+}
+.login .dos {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #49a078;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    
+  }
+
+.fa-solid {
+  position: relative;
+  margin-top: 10px;
+}
+
