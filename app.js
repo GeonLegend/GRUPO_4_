@@ -10,6 +10,7 @@ const rutasHome = require('./routes/home.js');
 
 const PORT = process.env.PORT || 4444;
 app.listen(PORT, console.log('Escuchándo en el puerto ' + PORT));
+app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', rutasHome);
