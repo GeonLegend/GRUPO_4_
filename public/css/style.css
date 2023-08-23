@@ -3,7 +3,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+img{
+    max-width: 100%;
+}
 body input[type="search"] {
     outline: none;
 }
@@ -44,11 +46,12 @@ header {
 
 .header-search button {
     border: none;
-    background-color: transparent;
+    background-color: #fff;
     position: absolute;
     top: 4px;
     right: 5px;
     cursor: pointer;
+    padding-right: 5px;
 }
 
 .header-account {
