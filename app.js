@@ -1,13 +1,19 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const PORT = process.env.PORT||4444;
+const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public')));
+const rutasLogin = require('./routes/login.js');
+const rutasRegister = require('./routes/register.js');
+const rutasProductoDetalle = require('./routes/productDetail.js');
+const rutasCarrito = require('./routes/productCart.js');
+const rutasHome = require('./routes/home.js');
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'home.html')));
-app.get('/producto-detalle', (req, res) => res.sendFile(path.join(__dirname, 'views', 'productDetail.html')));
-app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, 'views', 'productCart.html')));
-app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')));
-app.get('/register', (req, res) => res.sendFile(path.join(__dirname , 'views','register.html')));
-app.listen(PORT, () => console.log('Escuchando puerto en el servidor: ' + PORT));
+const PORT = process.env.PORT || 4444;
+app.listen(PORT, console.log('Escuchándo en el puerto ' + PORT));
+
+app.use(express.static(path.join(__dirname, 'public')))
+app.use('/', rutasHome);
+app.use('/login', rutasLogin);
+app.use('/producto-detalle', rutasProductoDetalle);
+app.use('/carrito', rutasCarrito);
+app.use('/registro', rutasRegister);
