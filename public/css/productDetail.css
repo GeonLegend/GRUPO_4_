@@ -1,0 +1,472 @@
+body{
+    color: #000;
+}
+main{
+    background-image: url(/images/5594016.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    opacity: 0.95;
+    font-family: 'Raleway', sans-serif;
+}
+/*Alineación de contenidos*/
+.contentProductDetail{
+    width: 100%;
+}
+.leftColumn{
+    width: 90%;
+    margin: auto;
+}
+.vendedor{
+    font-size: 3.5vw;
+    display: inline-block;
+    padding: 10px;
+    border: #49a078 solid 3px;
+    border-radius: 10px;
+    margin: 15px 0 10px 0;
+}
+.vendedor a{
+    text-decoration: none;
+    color: #000;
+    transition: all 250ms;
+}
+.vendedor a:hover{
+    color: #49a078;
+}
+.productInformation{
+    display: flex;
+    flex-wrap: wrap;
+    color: #666;
+    font-size: 4vw;
+}
+.productInformation__States{
+    width: 25%;
+}
+.productInformation__Sales{
+    width: 75%;
+}
+.productName{
+    font-size: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.rightColumn{
+    width: 90%;
+    margin: auto;
+}
+.price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.realPrice{
+    width: 100%;
+    text-decoration: line-through;
+}
+.priceWithDiscount{
+    width: 30%;
+    font-size: 6vw;
+}
+.discountPercentage{
+    font-size: 5vw;
+    color: #49a078;
+}
+.purchaseInformation{
+    margin: 15px 0px 15px 0px;
+    padding: 5px;
+    border: #222 solid 2px;
+    box-shadow: 0 0 15px #49a078;
+    border-radius: 5px;
+    background-color: #ebebeb;
+}
+.paymentMethods{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+}
+.paymentMethods p{
+    font-size: 4vw;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.paymentMethods .method{
+    width: 15vw;
+    height: 15vw;
+    border: #222 solid 1px;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 0px 5px 0px 5px;
+    transition: all 250ms;
+    display: flex;
+    align-items: center;
+}
+.paymentMethods .method:hover{
+    box-shadow: 0 0 10px #49a078;
+}
+.purchaseAction__border{
+    border: #49a078 solid 3px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+.message__amount, .message__stockReference, .amount, .stockReference{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+.message__amount, .message__stockReference{
+    background-color: #49a078;
+    border-right: #49a078 solid 1px;
+}
+.amount input{
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+.purchaseOptions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.purchase, .addToCart{
+    width: 47%;
+    background-color: #222;
+    border: 2px solid #000;
+    color: #49a078;
+    font-size: 4vw;
+    padding: 3px;
+    border-radius: 5px;
+    transition: all 250ms;
+    margin-bottom: 15px;
+}
+.purchase:hover, .addToCart:hover{
+    color: #fff;
+    border: #fff solid 2px;
+    text-shadow: 0 0 10px #49a078,
+    0 0 10px #49a078;
+    box-shadow: 0 0 10px #49a078,
+    0 0 20px #49a078,
+    0 0 30px #49a078,
+    inset 0 0 10px #49a078;
+}
+.columnBottom{
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+}
+.productDescription{
+    border: solid 3px #222;
+    border-radius: 5px;
+    padding: 8px;
+}
+.questionsToTheSeller{
+    margin-top: 15px;
+}
+.questionsToTheSeller textarea{
+    width: 100%;
+    margin-top: 10px;
+    background: transparent;
+    padding: 4px;
+    border-radius: 5px;
+    border: #49a078 solid 3px;
+}
+
+/*Configuración del carrusel*/
+.carrousel__container{
+    padding: 1rem;
+    padding-bottom: 6vw;
+    width: 100%;
+    background-color: #222;
+    border: #49a078 solid 3px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.carrousel__sliderWrapper{
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid #49a078;
+    width: 100%;
+}
+.carrousel__slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.carrousel__slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+}
+.carrousel__sliderNav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: -6vw;
+    transform: translate(-50%);
+    z-index: 1;
+}
+.carrousel__sliderNav a{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 0.2rem #000 solid;
+    opacity: 0.75;
+    transition: all ease 250ms;
+}
+.carrousel__sliderNav a:hover{
+    opacity: 1;
+    background-color: #49a078;
+}
+/*Configuración Botón de Favoritos*/
+.productFavouriteIcon{
+    position: relative;
+    text-align: center;
+    margin-top: -0.7rem;
+}
+.productFavouriteIcon label{
+    position: relative;
+}
+.productFavouriteIcon label input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.productFavouriteIcon label .icon-box{
+    width: 10vw;
+    height: 10vw;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.productFavouriteIcon label .icon-box .fa-regular{
+    font-size: 6vw;
+    color: #000;
+    transition: 0.5s;
+} 
+.productFavouriteIcon label input[type="checkbox"]:checked ~ .icon-box{
+   background: #000;
+   border: 3px solid #fff;
+   box-shadow: 0 0 10px #49a078,
+   0 0 20px #49a078,
+   0 0 30px #49a078,
+   inset 0 0 10px #49a078;
+}
+.productFavouriteIcon label input[type="checkbox"]:checked ~ .icon-box .fa-regular{
+    color: #fff;
+    text-shadow: 0 0 10px #49a078,
+    0 0 10px #49a078;
+}
+/*Configuración de la Calificacion en Estrellas*/
+.calification__container{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.calification__container span{
+    font-size: 4vw;
+}
+.calification__container .calification input{
+    display: none;
+}
+.calification{
+    background-color: #181818;
+    padding: 5px;
+    border-radius: 5px;
+    border: #696969 solid 2px;
+}
+.calification label{
+    font-size: 4vw;
+    color: #444;
+    float: right;
+    transition: all 0.2s ease;
+    padding: 0 5px 0 5px;
+}
+input:not(:checked) ~ label:hover, input:not(:checked) ~ label:hover ~ label{
+    color: #49a078;
+}
+input::checked ~ label{
+    color: #49a078;
+}
+input#rate-5:checked ~ label{
+    color: #49a078;
+    text-shadow: 0 0 10px #49a078;
+}
+input#rate-4:checked ~ label{
+    color: #49a078;
+    text-shadow: 0 0 10px #49a078;
+}
+input#rate-3:checked ~ label{
+    color: #49a078;
+    text-shadow: 0 0 10px #49a078;
+}
+input#rate-2:checked ~ label{
+    color: #49a078;
+    text-shadow: 0 0 10px #49a078;
+}
+input#rate-1:checked ~ label{
+    color: #49a078;
+    text-shadow: 0 0 10px #49a078;
+}
+input:checked form{
+    display: block;
+}
+@media (max-width : 480px){
+
+}
+@media (min-width : 481px){
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+    }    
+    .rightColumn, .leftColumn{
+        width: 45%;
+        height: 100%;
+    }
+    .vendedor{
+        font-size: 2vw;
+    }
+    .productInformation{
+        font-size: 2.5vw;
+    }
+    .productName{
+        font-size: 2vw;
+    }
+    .productFavouriteIcon label .icon-box .fa-regular{
+        font-size: 2.5vw;
+    }
+    .productFavouriteIcon label .icon-box{
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+    .discountPercentage{
+        font-size: 4vw;
+    }
+    .priceWithDiscount{
+        font-size: 4vw;
+        width: 50%;
+    }
+    .paymentMethods p{
+        font-size: 2.5vw;
+    }
+    .paymentMethods .method{
+        width: 6.9vw;
+        height: 6.9vw;
+        justify-content: space-between
+    }
+    .purchase, .addToCart{
+        font-size: 2vw;
+    }
+    .carrousel__sliderNav a{
+        width: 2vw;
+        height: 2vw;
+    }
+    .carrousel__sliderNav{
+        bottom: -3vw;
+    }
+    .carrousel__container{
+        padding-bottom: 3vw;
+    }
+    .columnBottom{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productDescription{
+        width: 100%;
+    }
+    .questionsToTheSeller, .calification__container{
+        width: 50%;
+    }
+    .calification__container span{
+        font-size: 3vw;
+    }
+}
+@media (min-width : 768px){
+    .vendedor{
+        font-size: 1.5vw;
+    }
+    .productInformation{
+        font-size: 2vw;
+    }
+    .productName{
+        font-size: 1.8vw;
+    }
+    .productFavouriteIcon label .icon-box .fa-regular{
+        font-size: 2vw;
+    }
+    .productFavouriteIcon label .icon-box{
+        width: 4vw;
+        height: 4vw;
+    }
+    .realPrice{
+        font-size: 2vw;
+    }
+    .purchaseInformation{
+        font-size: 1.5vw;
+    }
+    .paymentMethods p{
+        font-size: 2vw;
+    }
+    .purchaseAction{
+        font-size: 1.5vw;
+    }
+    .amount input{
+        font-size: 1.5vw;
+    }
+    .productDescription{
+        font-size: 2vw;
+    }
+    .carrousel__sliderNav a{
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    .carrousel__sliderNav{
+        bottom: -2.5vw;
+    }
+}
+@media (min-width : 1280px){
+    .realPrice{
+        font-size: 1.8vw;
+    }
+    .priceWithDiscount{
+        font-size: 2.5vw;
+    }
+    .realPrice{
+        font-size: 2vw;
+    }
+    .discountPercentage{
+        font-size: 2.3vw;
+    }
+    .productDescription{
+        font-size: 1.5vw;
+    }
+    .calification__container span{
+        font-size: 1.5vw;
+    }
+    .questionsToTheSeller h3{
+        font-size: 1.5vw;
+    }
+}
