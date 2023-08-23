@@ -10,6 +10,7 @@
   "author": "Grupo 4 DH, Luis Mamaní, Candela Almaraz, María José Tolaba, Agustina Mendoza, Fran Campos, Díaz Quispia Julián",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   }
 }
