@@ -12,4 +12,19 @@
 ## Hacer Menos:
 * Ser inconstante con el trabajo.
 ## Dejar de Hacer:
-* Por ahora nada por recalcar.
+* Por ahora nada por recalcar
+
+# RETROSPECTIVA DEL SPRINT 2
+## Comenzar a hacer:
+* Respetar los horarios establecidos para las reuniones grupales.(DE NUEVO)
+* Avisar con antelación por cualquier inconveniente que impida asistir a la reunión grupal.
+## Hacer Más:
+* MEJORAR LA COMUNICACION ENTRE NOSOTROS 
+* MANTENER LA COONSTANCIA 
+## Continuar Haciendo:
+* SEGUIR HACIENDO REUNIONES PARA DAR UN INFORME DE NUESTRO TRABAJO
+* COOPERAR PARA TERMINAR EL SPRINT LO ANTES POSIBLE
+## Hacer Menos:
+* NO TENER COMUNICACION 
+## Dejar de Hacer:
+* DEJAR DE PROCRASTINAR O ALARGARLA
