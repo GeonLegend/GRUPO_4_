@@ -1,5 +1,5 @@
 const path = require('path');
 const productDetailControlador = {
-    inicio: (req, res) => res.sendFile(path.join(__dirname, '../views/products/productDetail.html'))
-}
+    inicio: (req, res) => res.render('productDetail')
+};
 module.exports = productDetailControlador;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
+
+    <main>
+        <p class="bienvenida">¡Te damos la bienvenida!</p>
+    <div class="login">
+        <p class="iniciar-sesion">INICIAR SESIÓN CON EMAIL</p>
+        <form action="/login">
+            <input type="text" name="usuario" placeholder="ingresar email">
+            <input type="password" name="contraseña" placeholder="ingresar contraseña">
+        </form>
+    
+        <p class="uno"><a href="https//"></a>
+            Registrarme
+        </p>
+        <p class="dos"><a href="www." ></a>
+            Olvide mi contraseña
+        </p>
+        <form action="/login" class="enviar">
+            <input type="submit" name="Iniciar sesion" value="Login">
+        </form>
+    </div>
+    </main>
+    
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
+</body>
+</html>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./partials/head") %>
     <link rel="stylesheet" href="./css/register.css">
     <title>registro</title>
     <script>
@@ -21,8 +20,12 @@
     </script>
 </head>
 <body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
 
-    <div class="contenedor">
+    <main>
+        <div class="contenedor">
         <h3>Registro</h3>
         <form action="#" method="post" >
             <label for="name">Nombre</label>
@@ -40,5 +43,10 @@
             <input type="submit" value="Registrarse">
         </form>
     </div>
+    </main>
+    
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
 </html>

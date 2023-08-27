@@ -1,5 +1,5 @@
 const path = require('path');
 const loginControlador = {
-    inicio: (req, res) => res.sendFile(path.join(__dirname, '../views/users/login.html'))
-}
+    inicio: (req, res) => res.render('login')
+};
 module.exports = loginControlador;
