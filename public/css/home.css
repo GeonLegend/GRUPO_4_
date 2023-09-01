@@ -1,0 +1,238 @@
+main {
+    background-color: #dce1de;
+}
+
+/* Configuracion del carrusel */
+.carrusel-news {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel-slider {
+    /* En relacion a cuantas imagenes tengamos */
+    width: 300%;  
+    animation: slide 16s infinite;
+    
+    display: flex;
+}
+
+@keyframes slide {
+    0% { margin-left: 0%; }
+    30% { margin-left: 0%; }
+
+    40% { margin-left: -100%; }
+    60% { margin-left: -100%; }
+
+    70% { margin-left: -200%; }
+    95% { margin-left: -200%; }
+}
+
+/* Flechas del carrusel */
+
+.carrusel-arrow {
+    padding: 10px;
+    background-color: #ebebeb;
+    position: absolute;
+    top: 45%;
+}
+.carrusel-arrow i {
+    font-size: 20px;
+    color: black;
+}
+.carrusel-left-arrow {
+    left: 0px;
+}
+.carrusel-right-arrow {
+    right: 0px;
+}
+
+.main-center {
+    margin: 0vw 5vw;
+}
+
+/* Iconos flotantes */
+.floating-options {
+    margin: 40px 0px;
+}
+
+.floating-options ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.floating-options ul li {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 300ms;
+}
+
+.option-category {
+    display: none;
+}
+
+.icon-option{
+    height: 100%;
+    border-radius: 50%;
+
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-option i {
+    color: #49a078;
+    position: relative;
+}
+
+/* ****************************************************************** Animacion *********************************************** */
+@keyframes icono {
+    0% {
+        bottom: 4px;
+    }
+    30% {
+        rotate: 45deg;
+    }
+    60% {
+        rotate: -45deg;
+        bottom: 10px;
+    }
+    100% {
+        bottom: 0px;
+    }
+
+}
+
+/* Tarjetas */
+.cards {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section-title {
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.titleH2 {
+    display: inline;
+    border-bottom: solid #1f2421 4px;
+}
+
+.section-card {
+    height: 450px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 300ms;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.section-card__img {
+    margin: 20px;
+}
+
+.section-card__img img {
+    width: 250px;
+    height: 250px;
+    
+}
+
+.section-card__old-price h4 {
+    display: inline;
+}
+
+.old-price {
+    color: gray;
+    margin-right: 10px;
+    text-decoration: line-through;
+}
+.descount-price {
+    padding: 2px 5px;
+    color: #49a078;
+    background-color: #222;
+}
+
+.section-card__price {
+    font-weight: bold;
+    color:#49a078;
+}
+.section-card__price p {
+    font-size: 20px;
+}
+
+.card-btn {
+    margin-bottom: 15px;
+    font-size: 100%;
+    color: #49a078;
+    background-color: #222;
+    padding: 10px 10px;
+    border-radius: 5px;
+
+    transition: all 250ms;
+}
+
+@media (min-width: 577px){
+    .floating-options ul li {
+        width: 125px;
+        height: 125px;
+    }
+
+    .icon-option {
+        font-size: 18px;
+    }
+
+    .cards {
+        justify-content: space-between;
+    }
+    .section-card {
+        width: 250px;
+    }
+
+    .section-card__img {
+        background-color: #222;
+    }
+}
+
+@media (min-width: 993px) {
+    .option-category{
+        display: initial;
+    }
+
+    .section-card:hover {
+        box-shadow: 0 2px 8px 0 #49a078, 0 4px 20px 0 #49a078;
+    }
+
+    .card-btn:hover {
+        color: white;
+        border: #fff solid 2px;
+        text-shadow: 0 0 10px #49a078,
+        0 0 10px #49a078;
+        box-shadow: 0 0 10px #49a078,
+        0 0 20px #49a078,
+        0 0 30px #49a078,
+        inset 0 0 10px #49a078;
+    }
+
+    .floating-options ul li:hover {
+        box-shadow: 0 4px 8px 0 #9cc5a1, 2px -2px 15px 0 #9cc5a1;
+    }
+}
