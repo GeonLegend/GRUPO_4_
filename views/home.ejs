@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/home.css">
-    <title>HOME</title>
+    <%- include("./partials/head", { title: "Home" }) %>
+    <link rel="stylesheet" href="/css/home.css">        
 </head>
+
 <body>
     <header>
         <%- include("./partials/header") %>
@@ -137,7 +138,7 @@
                 </section>
 
             </div>
-            
+
         </div>
     </main>
 
@@ -145,4 +146,5 @@
         <%- include("./partials/footer") %>
     </footer>
 </body>
+
 </html>
