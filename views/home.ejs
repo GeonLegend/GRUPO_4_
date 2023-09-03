@@ -1,21 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/home.css">
-    <title>HOME</title>
+    <%- include("./partials/head", { title: "Home" }) %>
+    <link rel="stylesheet" href="/css/home.css">        
 </head>
+
 <body>
     <header>
         <%- include("./partials/header") %>
     </header>
 
     <main>
+        <div class="carrusel-news">
+            <button class="carrusel-arrow carrusel-left-arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carrusel-arrow carrusel-right-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <ul class="carrusel-slider">
+                <li>
+                    <a href="">
+                        <img src="/images/News/News1.jpg" alt="News1" id="carrusel-image-1">
+                    </a>
+                </li>
 
+                <li>
+                    <a href="">
+                        <img src="/images/News/News2.jpg" alt="News2" id="carrusel-image-2">
+                    </a>
+                </li>
+
+                <li id="carrusel-image-3">
+                    <a href="">
+                        <img src="/images/News/News3.jpg" alt="News3" id="#carrusel-image-3">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="main-center">
+            <div class="floating-options">
+                <ul>
+                    <li>
+                        <a href="" class="icon-option">
+                            <i class="fa-solid fa-tag"></i>
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="" class="icon-option">
+                            <i class="fa-solid fa-ticket"></i>
+                            Cupones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="icon-option">
+                            <i class="fa-solid fa-star"></i>
+                            Más vendidos
+                        </a>
+                    </li>
+                    <li class="option-category">
+                        <a href="" class="icon-option icon-option-category">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            Celulares
+                        </a>
+                    </li>
+                    <li class="option-category">
+                        <a href="" class="icon-option">
+                            <i class="fa-solid fa-tv"></i>
+                            Televisores
+                        </a>
+                    </li>
+                    <li class="option-category">
+                        <a href="" class="icon-option">
+                            <i class="fa-solid fa-laptop"></i>
+                            Laptops
+                        </a>
+                    </li>
+                    <li class="option-category">
+                        <a href="" class="icon-option">
+                            <i class="fa-solid fa-gamepad"></i>
+                            Consolas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cards">
+                <div class="section-title">
+                    <h2 class="titleH2">Productos</h2>
+                </div>
+                <section class="section-card">
+                    <article class="section-card__img">
+                        <img src="/images/products/playstation5.jpg" alt="playstation5">
+                    </article>
+
+                    <article class="section-card__title">
+                        <h3>Titulo del producto</h3>
+                    </article>
+                    <article class="section-card__price">
+                        <p>$ 00.00</p>
+                    </article>
+                    <article class="section-card__btn">
+                        <button class="card-btn">
+                            AGREGAR AL CARRITO
+                        </button>
+                    </article>
+                </section>
+
+                <div class="section-title">
+                    <h2 class="titleH2">Ofertas de productos por tiempo limitado!</h2>
+                </div>
+                <section class="section-card">
+                    <article class="section-card__img">
+                        <img src="./images/products/playstation5.jpg" alt="playstation5">
+                    </article>
+
+                    <article class="section-card__title">
+                        <h3>Titulo del producto</h3>
+                    </article>
+                    <article class="section-card__old-price">
+                        <h4 class="old-price">00.00</h4>
+                        <h4 class="descount-price">14% OFF</h4>
+                    </article>
+                    <article class="section-card__price">
+                        <p>$ 00.00</p>
+                    </article>
+                    <article class="section-card__btn">
+                        <button class="card-btn">
+                            AGREGAR AL CARRITO
+                        </button>
+                    </article>
+                </section>
+
+            </div>
+
+        </div>
     </main>
 
     <footer>
         <%- include("./partials/footer") %>
     </footer>
 </body>
+
 </html>
