@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/addProduct.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Agregar Productos</title>
+  </head>
+  <body>
+    <main>
+      <section class="product-section">
+        <h1>Agregar Productos:</h1>
+        <section class="product-container">
+          <% productos.forEach((producto, index) => {%>
+          <article
+            class="product"
+            id="btn-edit-<%= index%>"
+            onclick="showEditModal('<%= producto.id%>','<%= producto.nombre%>' , '<%= producto.descripcion%>', '<%= producto.categoria%>', '<%= producto.estado%>', '<%= producto.precio%>')"
+          >
+            <h2><%= producto.nombre%></h2>
+            <p><%= producto.descripcion%></p>
+            <p><%= producto.categoria%></p>
+            <p><%= producto.estado%></p>
+            <p><%= producto.precio%></p>
+          </article>
+          <% }) %>
+        </section>
+        <section class="btn-container">
+          <button id="btn-create" class="btn-primary">Agregar Producto</button>
+        </section>
+      </section>
+    </main>
+    <div id="createModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Agregar nuevo producto:</p>
+        <form action="/addIndex/addProduct" method="post">
+          <section class="form-field">
+            <div>
+              <label for="nombre">Nombre del producto:</label>
+            </div>
+            <input type="text" name="nombre" id="nombre" class="nombre-input" />
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="descripcion">Descripción del producto:</label>
+            </div>
+            <input name="descripcion" id="descripcion" class="descripcion-text">
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="categoria">Categoria:</label>
+            </div>
+            <input type="text" name="categoria" id="categoria", class="categoria-input">
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="estado">Estado:</label>
+            </div>
+            <input type="text" name="estado" id="estado", class="estado-input">
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="precio">Precio:</label>
+            </div>
+            <input type="text" name="precio" id="precio", class="precio-input">
+          </section>
+          <section class="form-field">
+            <button type="submit">Crear</button>
+          </section>
+        </form>
+      </div>
+    </div>
+
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Editar Descripción:</p>
+        <form action="/addIndex/addProduct/edit" method="post">
+          <section class="form-field">
+            <div>
+              <label for="nombre">Titúlo:</label>
+            </div>
+            <input
+              type="text"
+              name="nombre"
+              id="editNombre"
+              class="nombre-input"
+            >
+          </section>
+
+          <section class="form-field">
+            <div>
+              <label for="descripcion">Descripción del Producto:</label>
+            </div>
+            <input
+              name="descripcion"
+              id="descripcionEdit"
+              class="descripcion-text">
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="categoria">Categoria:</label>
+            </div>
+            <input type="text" name="categoria" id="categoriaEdit", class="categoria-input">
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="estado">Estado:</label>
+            </div>
+            <input type="text" name="estado" id="estadoEdit", class="estado-input">
+          </section>
+          <section class="form-field">
+            <div>
+              <label for="precio">Precio:</label>
+            </div>
+            <input type="number" name="precio" id="precioEdit", class="precio-input">
+          </section>
+          <input type="hidden" name="id" id="hiddenId">
+          <section class="form-field">
+            <button type="submit">Editar</button>
+            <button id="btn-delete" class="btn-danger" type="button">Delete</button>
+          </section>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    let modalCreate = document.getElementById("createModal");
+    let modalEdit =  document.getElementById("editModal");
+    let btn = document.getElementById("btn-create");
+    let btnEdit = document.getElementById("btn-edit");
+    let btnDelete = document.getElementById("btn-delete");
+    let span = document.getElementsByClassName("close")[0];
+    let editedNoteId = null;
+    btn.onclick = function () {
+      modalCreate.style.display = "block";
+    };
+    btnDelete.onclick = function () {
+      let url = 'http://localhost:3000/addIndex/addProduct/delete/' + editedNoteId;
+      fetch(url).then((result) => {
+        location.reload();
+      }).catch((e) => console.log(e))
+    }
+    function showEditModal (id, nombre, descripcion, categoria, estado, precio) {
+      editedNoteId = id;
+      let editNombre =  document.getElementById("editNombre");
+      let descripcionEdit = document.getElementById("descripcionEdit");
+      let categoriaEdit = document.getElementById("categoriaEdit");
+      let estadoEdit = document.getElementById("estadoEdit");
+      let precioEdit = document.getElementById("precioEdit");
+      let idInput = document.getElementById("hiddenId");
+
+      editNombre.value = nombre;
+      descripcionEdit.value = descripcion;
+      categoriaEdit.value = categoria;
+      estadoEdit.value = estado;
+      precioEdit.value = precio;
+      idInput.value = id;
+
+      modalEdit.style.display = "block";
+      console.log(nombre)
+    }
+    span.onclick = function () {
+      modalCreate.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == modalCreate) {
+        modalCreate.style.display = "none";
+        modalEdit.style.display = "none"
+      }
+    };
+  </script>
+</html>
