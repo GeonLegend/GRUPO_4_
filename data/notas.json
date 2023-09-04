@@ -1,0 +1,56 @@
+[
+  {
+    "id": "55de4351-c153-4525-8d4c-01620e5a3e27",
+    "nombre": "adafsasdas",
+    "descripcion": "asdasdasdasd",
+    "categoria": "asdasdasdasd",
+    "estado": "asdasdasd",
+    "precio": "324234234",
+    "image": "default.jpg"
+  },
+  {
+    "id": "84d54daf-c517-41d1-a141-d2f6e369a336",
+    "nombre": "asdasdasd",
+    "descripcion": "asdasdasd",
+    "categoria": "asdasd",
+    "estado": "asdasdas",
+    "precio": "2342342",
+    "image": "default.jpg"
+  },
+  {
+    "id": "5fd8c04e-8515-439d-a2b5-78213f3f47ab",
+    "nombre": "asdasdasd",
+    "descripcion": "asdasdasdaasdas",
+    "categoria": "asdasdsad",
+    "estado": "asdasdasdasd",
+    "precio": "3244141241",
+    "image": "default.jpg"
+  },
+  {
+    "id": "f3e35334-9e9b-48a9-a473-1e444098b89a",
+    "nombre": "asdasasdsa",
+    "descripcion": "asdasdasd",
+    "categoria": "asdasdasd",
+    "estado": "asdasdsa",
+    "precio": "234423",
+    "image": "default.jpg"
+  },
+  {
+    "id": "dcea6d7a-9918-47f9-862a-f490630f152e",
+    "nombre": "qweqweqw",
+    "descripcion": "qweqweqwe",
+    "categoria": "qweqweq",
+    "estado": "qweqwe",
+    "precio": "32342343",
+    "image": "default.jpg"
+  },
+  {
+    "id": "c6729619-f4a3-4371-abb1-f5703eb5b50d",
+    "nombre": "asdasdas",
+    "descripcion": "asdasdas",
+    "categoria": "asdasdasdas",
+    "estado": "sasdasdasd",
+    "precio": "asdasdasd",
+    "image": "default.jpg"
+  }
+]
