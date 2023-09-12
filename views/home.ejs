@@ -94,51 +94,64 @@
                 <div class="section-title">
                     <h2 class="titleH2">Productos</h2>
                 </div>
-                <section class="section-card">
-                    <article class="section-card__img">
-                        <img src="/images/products/playstation5.jpg" alt="playstation5">
-                    </article>
 
-                    <article class="section-card__title">
-                        <h3>Titulo del producto</h3>
-                    </article>
-                    <article class="section-card__price">
-                        <p>$ 00.00</p>
-                    </article>
-                    <article class="section-card__btn">
-                        <button class="card-btn">
-                            AGREGAR AL CARRITO
-                        </button>
-                    </article>
-                </section>
-
+                <% products.forEach(product => { %>
+                    <% if(!product.discount){ %>
+                    <section class="card">
+                        <a href="" class="section-card">
+                            <article class="section-card__img">
+                                <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                            </article>
+                            <article class="section-card__title">
+                                <h3><%= product.name %></h3>
+                            </article>
+                            <article class="section-card__price">
+                                <p>$ <%= product.price %></p>
+                            </article>
+                            <article class="section-card__btn">
+                                <button class="card-btn">
+                                    AGREGAR AL CARRITO
+                                </button>
+                            </article>
+                        </a>
+                    </section>
+                    <% }; %>
+                <% }); %>
+                    
                 <div class="section-title">
                     <h2 class="titleH2">Ofertas de productos por tiempo limitado!</h2>
                 </div>
-                <section class="section-card">
-                    <article class="section-card__img">
-                        <img src="./images/products/playstation5.jpg" alt="playstation5">
-                    </article>
 
-                    <article class="section-card__title">
-                        <h3>Titulo del producto</h3>
-                    </article>
-                    <article class="section-card__old-price">
-                        <h4 class="old-price">00.00</h4>
-                        <h4 class="descount-price">14% OFF</h4>
-                    </article>
-                    <article class="section-card__price">
-                        <p>$ 00.00</p>
-                    </article>
-                    <article class="section-card__btn">
-                        <button class="card-btn">
-                            AGREGAR AL CARRITO
-                        </button>
-                    </article>
-                </section>
+                <% products.forEach(product => { %>
+                    <% if(product.discount){ %>
+                    <section class="card">
+                        <a href="" class="section-card">
+                            <article class="section-card__img">
+                                <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                            </article>
+                            <article class="section-card__title">
+                                <h3><%= product.name %></h3>
+                            </article>
+                            <article class="section-card__old-price">
+                                <!-- Precio del producto sin el descuento -->
+                                <h4 class="old-price">$ <%= product.price %></h4>
+                                <h4 class="descount-price"> <%= product.discount %>% OFF</h4>
+                            </article>
+                            <article class="section-card__price">
+                                <!-- Al precio del producto se le descuenta el descuento -->
+                                <p>$ <%= product.price - (product.price*product.discount/100) %></p>
+                            </article>
+                            <article class="section-card__btn">
+                                <button class="card-btn">
+                                    AGREGAR AL CARRITO
+                                </button>
+                            </article>
+                        </a>
+                    </section>
+                    <% }; %>
+                <% }); %>
 
             </div>
-
         </div>
     </main>
 

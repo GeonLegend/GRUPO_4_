@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head", { title: "Productos" }) %>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
+
+    <main>
+        <div class="main-center">
+            <div class="cards">
+                <div class="section-title">
+                    <h2 class="titleH2">Productos</h2>
+                </div>
+    
+                <% products.forEach(product => { %>
+                    <section class="card">
+                        <a href="" class="section-card">
+                            <article class="section-card__img">
+                                <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                            </article>
+                            <article class="section-card__title">
+                                <h3><%= product.name %></h3>
+                            </article>
+                            <% if(product.discount){ %>
+                            <article class="section-card__old-price">
+                                <!-- Precio del producto sin el descuento -->
+                                <h4 class="old-price">$ <%= product.price %></h4>
+                                <h4 class="descount-price"> <%= product.discount %>% OFF</h4>
+                            </article>
+                            <article class="section-card__price">
+                                <!-- Al precio del producto se le descuenta el descuento -->
+                                <p>$ <%= product.price - (product.price*product.discount/100) %></p>
+                            </article>
+                            <% } else {%>
+                            <article class="section-card__price">
+                                <!-- Al precio del producto se le descuenta el descuento -->
+                                <p>$ <%= product.price %></p>
+                            </article>
+                            <% } %>
+                            <article class="section-card__btn">
+                                <button class="card-btn">
+                                    AGREGAR AL CARRITO
+                                </button>
+                            </article>
+                        </a>
+                    </section>
+                <% } ); %>
+    
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
+</body>

@@ -100,7 +100,7 @@
     "category": "Placa madre",
     "name": "Motherboard Asus Prime B560-plus S1200 Ddr4 Oem Acuario",
     "image": "product9.jpg",
-    "price": 38164,
+    "price": 381000,
     "discount": 41,
     "stock": 30,
     "description": "Prime ASUS Prime series motherboards are expertly engineered to unleash the full potential of 10th and 11th Generation Intel® Core™ processors. Boasting a robust power design, comprehensive cooling solutions and intelligent tuning options, PRIME B560-PLUS AC-HES provides daily users and DIY PC builders a range of performance tuning options via intuitive software and firmware features.",
@@ -230,7 +230,7 @@
   {
     "id": 20,
     "category": "Laptop",
-    "name": "otebook gamer Lenovo Legion 15ACH6H shadow black 15.6\", AMD Ryzen 5 5600H 16GB de RAM 512GB SSD, NVIDIA GeForce RTX 3060 165 Hz 2560x1440px Windows 11 Home",
+    "name": "Notebook gamer Lenovo Legion 15ACH6H shadow black 15.6\", AMD Ryzen 5 5600H 16GB de RAM 512GB SSD, NVIDIA GeForce RTX 3060 165 Hz 2560x1440px",
     "image": "product20.jpg",
     "price": 153620,
     "discount": 0,
