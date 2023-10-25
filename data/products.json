@@ -4,24 +4,24 @@
     "category": "Consola de videojuegos",
     "name": "Sony PlayStation 5",
     "image": "playstation5.jpg",
-    "price": 620406,
-    "discount": 21,
-    "stock": 33,
+    "price": "620000",
+    "discount": "21",
+    "stock": "33",
     "description": "Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos. PlayStation renovó las expectativas del mundo virtual con esta nueva consola y su gran rendimiento. Cuenta con una interfaz de usuario más rápida y fácil de navegar que en anteriores modelos. Además, podrás jugar durante horas desafiando a millones de contrincantes alrededor del mundo que esperan nuevos retos. Calidad de otro nivel Se considera que esta consola es de las mejores dentro del mercado, dado que presenta una resolución de hasta 4K. Además, el control DualSense para PS5 combina estilo y tecnología para que jugar sea más cómodo e interactivo para todos sus jugadores. Adaptada a tus necesidades Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 825 GB. Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición. Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás. Vas a poder reproducir música, ver tus películas y series favoritas a través de las aplicaciones descargables.",
-    "warranty": 11,
-    "rating": 1.1
+    "warranty": "13",
+    "rating": "2.2"
   },
   {
     "id": 2,
     "category": "Consola de videojuegos",
     "name": "Microsoft Xbox Series S",
     "image": "product2.jpg",
-    "price": 509676,
-    "discount": 0,
-    "stock": 23,
+    "price": "509676",
+    "discount": "0",
+    "stock": "23",
     "description": "Con tu consola Xbox Series tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos. La nueva generación de consolas está comandada por la Xbox Series que llegó al mercado para sorprender a todos. Su potencia y alto rendimiento te permitirá reducir las horas de descarga de juegos y contenido de manera considerable en comparación con otras consolas. Además, vas a poder jugar durante horas mientras te divertís con jugadores de todo el mundo. Adaptada a tus necesidades Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 512 GB. Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición. Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás. Vas a poder reproducir música, ver tus películas y series favoritas a través de las aplicaciones descargables.",
-    "warranty": 20,
-    "rating": 2.9
+    "warranty": "20",
+    "rating": "3.1"
   },
   {
     "id": 3,
@@ -40,24 +40,24 @@
     "category": "Procesador",
     "name": "Ryzen 5 5600g",
     "image": "product4.jpg",
-    "price": 239580,
-    "discount": 38,
-    "stock": 39,
+    "price": "239580",
+    "discount": "38",
+    "stock": "39",
     "description": "Mejora tu experiencia de juego con el Procesador gamer AMD Ryzen 5 5600G, diseñado para brindarte un rendimiento excepcional en tus juegos favoritos. Con sus 6 núcleos y 12 hilos, este procesador te permitirá disfrutar de una multitarea fluida y eficiente. Gracias a su arquitectura x86-64 y litografía de 7 nm, obtendrás un rendimiento óptimo con un menor consumo de energía. La frecuencia de reloj de 3.9 GHz a 4.4 GHz garantiza una velocidad de procesamiento rápida, mientras que la memoria caché de 16 MB te ayudará a acceder rápidamente a tus datos más utilizados. Además, este procesador es compatible con memoria RAM DDR4, lo que te permitirá aprovechar al máximo la velocidad y capacidad de tu sistema. El procesador gráfico Radeon Graphics integrado te brinda una calidad de imagen excepcional, permitiéndote disfrutar de tus juegos sin necesidad de una tarjeta gráfica adicional. Además, el procesador está desbloqueado, lo que te da la libertad de realizar overclocking y personalizar tu experiencia de juego según tus preferencias. Con una potencia de diseño térmico de 65 W, este procesador garantiza un funcionamiento eficiente y una menor generación de calor. Compatible con zócalos AM4, podrás instalarlo fácilmente en tu placa madre y comenzar a disfrutar de una experiencia de juego inigualable. No esperes más para llevar tu PC al siguiente nivel con el AMD Ryzen 5 5600G.",
-    "warranty": 14,
-    "rating": 3.4
+    "warranty": "14",
+    "rating": "3.4"
   },
   {
     "id": 5,
     "category": "Procesador",
     "name": "Procesador gamer Intel Core i7-13700K BX8071513700K de 16 núcleos y 5.4GHz de frecuencia con gráfica integrada",
     "image": "product5.jpg",
-    "price": 102201,
-    "discount": 40,
-    "stock": 30,
+    "price": "102201",
+    "discount": "40",
+    "stock": "30",
     "description": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos. Núcleos: el corazón del procesador En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto. Máxima potencia Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil. ¡Descubrí el abanico de posibilidades que esta función te ofrece!",
-    "warranty": 15,
-    "rating": 3.2
+    "warranty": "15",
+    "rating": "3.2"
   },
   {
     "id": 6,

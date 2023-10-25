@@ -147,6 +147,30 @@ header {
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 }
+/* Otros estilos existentes */
+
+/* Estilos para el botón en el header */
+/* Estilos para el botón en el header */
+.header-account button {
+    background-color: #49a078;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 0px 4% 0px 4%; /* Añadir un margen superior para separar el botón */
+}
+
+.header-account button:hover {
+    background-color: #408e6b;
+}
+
+
+/* Otros estilos existentes */
+
 
 @media screen and (max-width: 800px){
     .pie-pagina .grupo-1{
