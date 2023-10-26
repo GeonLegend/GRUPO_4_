@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="/css/editProduct.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear producto</h1>
+            <form action="#">
+                <input type="hidden" name="productId">
+                <label for="productCategory">Categoría del Producto:</label>
+                <input type="text"  name="productCategory">
+                <label for="productName">Nombre del Producto:</label>
+                <input type="text"  name="productName">
+                <label for="productImage">Imagen del Producto:</label>
+                <input type="file"  name="productImage">
+                <label for="productPrice">Precio del Producto:</label>
+                <input type="number"  name="productPrice" step="0.01">
+                <label for="productDiscounñt">Descuento del Producto:</label>
+                <input type="number"  name="productDiscount" step="0.01">
+                <label for="productStock">Stock del Producto:</label>
+                <input type="number"  name="productStock" step="0.01">
+                <label for="productDescription">Descripción del Producto:</label>
+                <textarea  name="productDescription"></textarea>
+                <label for="productWarranty">Garantía del Producto:</label>
+                <input type="number"  name="productWarranty" step="0.01">
+                <label for="productRating">Rating del Producto:</label>
+                <input type="number"  name="productRating" step="0.01">
+                <button type="submit">CREAR</button>
+            </form>
+    </div>
+</body>
+</html>

@@ -11,6 +11,7 @@ const rutasProductoDetalle = require('./routes/productDetail.js');
 const rutasCarrito = require('./routes/productCart.js');
 const rutasHome = require('./routes/home.js');
 const rutaProduct = require("./routes/products.js");
+const rutasCreateProduct = require('./routes/createProduct.js');
 const exp = require('constants');
 
 const PORT = process.env.PORT || 4444;
@@ -28,6 +29,7 @@ app.use('/producto-detalle', rutasProductoDetalle);
 app.use('/carrito', rutasCarrito);
 app.use('/registro', rutasRegister);
 app.use(rutasEditProduct);
+app.use(rutasCreateProduct)
 app.use("/product", rutaProduct);
 
 /* Comandos para instalar los modulos */
