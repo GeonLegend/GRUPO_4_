@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Productos</title>
+    <%- include("./partials/head", { title: "Lista de productos" }) %>
     <link rel="stylesheet" href="/css/listaProductos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
+
     <h1>Mis Productos</h1>
     <div class="container">
         <ul>
@@ -26,10 +28,14 @@
                     <strong>Descripcion:</strong> <%= product.description %><br>
                     <strong>Garantía:</strong> <%= product.warranty %> meses<br>
                     <strong>Rating:</strong> <%= product.rating %><br>
-                    <a href="/vista-editar-producto/<%= product.id %>">Editar</a>
+                    <a href="/product/vista-editar-producto/<%= product.id %>">Editar</a>
                 </li>
             <% }); %>
         </ul>
     </div>
+
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
 </html>

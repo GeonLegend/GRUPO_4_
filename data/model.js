@@ -13,9 +13,12 @@ let model = {
         let products = this.getProduct();
         return products.find((product) => product.id == productId);
     },
-    writeProducts : (products) => {
+    writeProducts : function(products) {
         fs.writeFileSync(
+            /* Ruta del json */
             productsPath, 
+            /* Se transforma el objeto literal que recibe como parametro a un json */
+            /* El tercer parametro son los espacios de lineas */
             JSON.stringify(products, null, 2),
         )
     },
@@ -39,7 +42,7 @@ let model = {
         };
         this.writeProducts(products);
     },
-    WriteProduct : function(product) {
+    witeProduct : function(product) {
         let products = this.getProduct();
         products.push(product);
 

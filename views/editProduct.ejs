@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Producto</title>
+    <%- include("./partials/head", { title: "Login" }) %>
     <link rel="stylesheet" href="/css/editProduct.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
+
     <div class="container">
         <h1>Editar Producto</h1>
-            <form action="/editar-producto?_method=PUT" method="POST" >
+            <form action="/product/editar-producto?_method=PUT" method="POST" >
                 <input type="hidden" name="productId" value="<%= product.id %>">
                 <label for="productCategory">Categoría del Producto:</label>
                 <input type="text"  name="productCategory" value="<%= product.category %>">
@@ -35,5 +37,9 @@
                 <button type="submit">Guardar Cambios</button>
             </form>
     </div>
+
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
 </html>
