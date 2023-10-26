@@ -12,6 +12,7 @@
   .login {
     width: 400px;
     margin: 0 auto;
+    margin-bottom: 40px;
     padding: 40px;
     background-color: #dce1de;
     border-radius: 5px;
@@ -21,8 +22,15 @@
     font-size: 20px;
     margin-bottom: 20px;
     margin-top: 30px;
-    margin-left: 760px;
 
+    display: flex;
+    justify-content: center;
+  }
+
+  .ancla{
+    text-decoration: none;
+    list-style: none;
+    color:#49a078;
   }
 
   @media (max-width: 480){
@@ -71,16 +79,11 @@
 }
 
 .login .uno {
-    color: #49a078;
     font-size: 16px;
 }
 .login .dos {
     font-size: 16px;
-    margin-top: 15px;
-    color: #49a078;
-    margin-left: 100px;
-    margin-bottom: 20px;
-    
+    margin: 15px 0px 20px 100px;
   }
 
 .fa-solid {
@@ -88,3 +91,44 @@
   margin-top: 10px;
 }
 
+.switch-block{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.switch-block p{
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #49a078;
+  border-radius: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.switch:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background-color: white;
+  top: 2.5px;
+  left: 2.5px;
+  transition: all 0.5s;
+}
+
+input[type='checkbox']:checked + .switch:after {
+  transform: translateX(20px);  
+}
+
+input[type='checkbox'] {
+  display: none;
+}

@@ -30,6 +30,27 @@
             <label for="name">Nombre</label>
             <input type="text" id="name" name="name" required>
 
+            <label for="surname">Apellido</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <p>Genero</p>
+            <div class="radio-block">
+                <div class="radio-block__element">
+                    <input type="radio" name="genre" id="M" value="M">
+                    <label for="M">Masculino</label>
+                </div>
+                <div class="radio-block__element">
+                    <input type="radio" name="genre" id="F" value="F">
+                    <label for="F">Femenino</label>
+                </div>
+            </div>
+
+            <div class="file-block">
+                <p class="text-file">Imagen de perfil</p>
+                <label for="uploadAvatar" class="labelUpload">Elegir Archivo</label>
+                <input type="file" id="uploadAvatar">
+            </div>
+
             <label for="email">Correo Electrónico</label>
             <input type="text" id="email" name="email" required>
 

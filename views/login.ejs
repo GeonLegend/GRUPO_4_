@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head", { title: "Login" }) %>
-    <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/login.css">
 </head>
+
 <body>
     <header>
         <%- include("./partials/header") %>
@@ -11,27 +13,34 @@
 
     <main>
         <p class="bienvenida">¡Te damos la bienvenida!</p>
-    <div class="login">
-        <p class="iniciar-sesion">INICIAR SESIÓN CON EMAIL</p>
-        <form action="/login">
-            <input type="text" name="usuario" placeholder="ingresar email">
-            <input type="password" name="contraseña" placeholder="ingresar contraseña">
-        </form>
-    
-        <p class="uno"><a href="https//"></a>
-            Registrarme
-        </p>
-        <p class="dos"><a href="www." ></a>
-            Olvide mi contraseña
-        </p>
-        <form action="/login" class="enviar">
-            <input type="submit" name="Iniciar sesion" value="Login">
-        </form>
-    </div>
+        <div class="login">
+            <p class="iniciar-sesion">INICIAR SESIÓN CON EMAIL</p>
+            <form action="/login">
+                <input type="text" name="usuario" placeholder="ingresar email">
+                <div class="switch-block">  
+                    <p>Recordar</p>
+                    <input type="checkbox" name="recordar" id="toggle">
+                    <label for="toggle" class="switch"></label>
+                </div>
+                <input type="password" name="contraseña" placeholder="ingresar contraseña">
+            </form>
+            <div class="options">
+                <p class="uno">
+                    <a href="/registro" class="ancla">Registrarme</a>
+                </p>
+                <p class="dos">
+                    <a href="www." class="ancla">Olvide mi contraseña</a>
+                </p>
+            </div>
+            <form action="/login" class="enviar">
+                <input type="submit" name="Iniciar sesion" value="Login">
+            </form>
+        </div>
     </main>
-    
+
     <footer>
         <%- include("./partials/footer") %>
     </footer>
 </body>
+
 </html>

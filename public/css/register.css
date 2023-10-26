@@ -5,28 +5,82 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2e5B39;
+    background-color: white;
 }
 .contenedor {
     max-width: 400px;
-    margin: auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: rgb(226, 223, 223);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
 }
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 3px;
 }
+
+input[type="file"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
 input[type="submit"] {
-    background-color: #3498db;
-    color: white;
-    border: none;
+    background-color: white;
+    color: #49a078;
+    border: 2px solid #49a078;
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+input[type="submit"]:hover{
+    background-color: #49a078;
+    color: white;
+}
+
+.radio-block{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.radio-block__element {
+    display: flex;   
+}
+
+.file-block{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.text-file{
+    margin-right: 15px;
+}
+
+#uploadAvatar {
+    display: none;
+}
+
+.labelUpload {
+    padding: 6px 10px;
+    background-color: white;
+    color: #49a078;
+    border: 2px solid #49a078;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.labelUpload:hover{
+    background-color: #49a078;
+    color: white;
 }
