@@ -44,6 +44,13 @@ const productController = {
         productModel.updateProduct(req.body.productId, req.body.productCategory, req.body.productName, req.body.image, req.body.productPrice, req.body.productDiscount, req.body.productStock, req.body.productDescription, req.body.productWarranty, req.body.productRating);
         res.redirect('/product/lista-de-productos');
     },
+
+    borrado:function (req, res) {
+        const id = req.params.id;
+        const actuProductos = products().filter((producto) => producto.id != id);
+        fs.writeFileSync(ruta, JSON.stringify(actuProductos, null, 2));
+        res.redirect("/home");
+}
     
     
 };

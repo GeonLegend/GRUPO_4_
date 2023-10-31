@@ -8,5 +8,6 @@ router.post('/crear-producto', productController.create);
 router.get('/vista-editar-producto/:id', productController.showEditView);
 router.put('/editar-producto', productController.updateProduct);
 router.get('/lista-de-productos', productController.showProductList);
+router.delete('/products/:id', productController.borrado);
 
 module.exports = router;
