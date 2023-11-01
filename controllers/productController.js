@@ -29,6 +29,11 @@ const productController = {
         const products = productModel.getProduct();
         res.render('listaProductos', { products });
     },
+    
+    detail: function(req, res) {
+        let details = productModel.getProductById(req.params.id)
+        res.render ("productDetail", {details}) 
+    },
 
     showEditView: (req, res) => {
         const productId = req.params.id;

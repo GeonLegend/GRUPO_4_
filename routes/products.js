@@ -3,6 +3,7 @@ const router = express.Router();
 const productController = require('../controllers/productController.js');
 
 router.get('/', productController.index);
+router.get('/:id', productController.detail);
 router.get('/vista-crear-producto', productController.showCreateView);
 router.post('/crear-producto', productController.create);
 router.get('/vista-editar-producto/:id', productController.showEditView);
