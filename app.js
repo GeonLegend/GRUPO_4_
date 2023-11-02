@@ -33,3 +33,4 @@ app.use("/product", rutaProduct);
 /* npm install express */
 /* npm install ejs */
 /* npm install uuid */
+/* npm install method-override */

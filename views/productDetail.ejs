@@ -20,7 +20,7 @@
         <section class="leftColumn">
             <div class="contentProductDetail">
                 <div class="vendedor">
-                    <a href="https://www.playstation.com/es-ar/" target="_blank"><%= details.category %></a>
+                    <a href="#" target="_blank"><%= details.category %></a>
                 </div>
                 <div class="productInformation">
                     <div class="productInformation__States">
@@ -83,7 +83,7 @@
                         <div class="message__amount">Cantidad</div><div class="amount"><input type="number" placeholder="Indicar Cantidad"></div>
                     </div>
                     <div class="purchaseAction__border">
-                        <div class="message__stockReference">Stock Disponible</div><div class="stockReference">25 Unidades</div>
+                        <div class="message__stockReference">Stock Disponible</div><div class="stockReference"><%= details.stock %> unidades</div>
                     </div>
                 </div>
                 <div class="purchaseOptions">
@@ -94,23 +94,9 @@
         </section>
         <section class="columnBottom">
             <div class="productDescription">
-                <%= details.description %>
                 <p>
-                    Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.
-                    
-                    PlayStation renovó las expectativas del mundo virtual con esta nueva consola y su gran rendimiento. Cuenta con una interfaz de usuario más rápida y fácil de navegar que en anteriores modelos. Además, podrás jugar durante horas desafiando a millones de contrincantes alrededor del mundo que esperan nuevos retos.
-                    
-                    Calidad de otro nivel
-                    Se considera que esta consola es de las mejores dentro del mercado, dado que presenta una resolución de hasta 4K.
-                    
-                    Además, el control DualSense para PS5 combina estilo y tecnología para que jugar sea más cómodo e interactivo para todos sus jugadores.
-                    
-                    Adaptada a tus necesidades
-                    Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 825 GB.
-                    Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición.
-                    Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás.
-                    
-                    Vas a poder reproducir música, ver tus películas y series favoritas a través de las aplicaciones descargables.</p>
+                    <%= details.description %>
+                </p>
             </div>
             <div class="questionsToTheSeller">
                 <h3>Dejános tus Comentarios</h3>

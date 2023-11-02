@@ -4,7 +4,9 @@
   "description": "Página destinada a la venta de productos tecnológicos",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "Grupo 4 DH, Luis Mamaní, Candela Almaraz, María José Tolaba, Agustina Mendoza, Fran Campos, Díaz Quispia Julián",
@@ -14,5 +16,8 @@
     "express": "^4.18.2",
     "method-override": "^3.0.0",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
