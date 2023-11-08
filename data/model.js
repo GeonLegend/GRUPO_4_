@@ -31,12 +31,12 @@ let model = {
                 if (productImage) {
                     products[i].image = '/ruta/de/la/imagen/' + productImage.filename;
                 }
-                products[i].price = productPrice;
-                products[i].discount = productDiscount;
-                products[i].stock = productStock;
+                products[i].price = parseFloat(productPrice);
+                products[i].discount = parseInt(productDiscount);
+                products[i].stock = parseInt(productStock);
                 products[i].description = productDescription;
-                products[i].warranty = productWarranty;
-                products[i].rating = productRating;
+                products[i].warranty = parseInt(productWarranty);
+                products[i].rating = parseFloat(productRating);
                 break;
             }
         };
@@ -54,14 +54,14 @@ let model = {
             JSON.stringify(products, null, 2),
         )
     },
-    getUser : () => {
+    getUsers : () => {
         /* Se le el contenido del json */
         const content = fs.readFileSync(usersPath, 'utf8');
         /* Se transforma el json a un objeto literal */
         return JSON.parse(content || '[]')
     },
     writeUser : function(user) {
-        let users = this.getUser();
+        let users = this.getUsers();
         users.push(user);
 
         fs.writeFileSync(
@@ -72,6 +72,15 @@ let model = {
             JSON.stringify(users, null, 2),
         )
     },
+    findByPk: function(id){
+        let users = this.getUsers();
+        return users.find(oneUser => oneUser.id === id);
+    },
+
+    findByField: function(field, text){
+        let users = this.getUsers();
+        return users.find(oneUser => oneUser[field] === text)
+    }
 }
 
 module.exports = model;
