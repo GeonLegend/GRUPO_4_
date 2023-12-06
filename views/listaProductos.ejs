@@ -13,6 +13,9 @@
     </header>
 
     <h1>Mis Productos</h1>
+    <a href="/product/vista-crear-producto">
+        <h3>Añadir un nuevo producto</h3>
+    </a>
     <div class="container">
         <ul>
             <% products.forEach(function(product) { %>
@@ -29,6 +32,7 @@
                     <strong>Garantía:</strong> <%= product.warranty %> meses<br>
                     <strong>Rating:</strong> <%= product.rating %><br>
                     <a href="/product/vista-editar-producto/<%= product.id %>">Editar</a>
+                    <a href="/product/eliminar/<%= product.id %>">Eliminar</a>
                 </li>
             <% }); %>
         </ul>

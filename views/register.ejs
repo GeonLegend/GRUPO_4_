@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include("./partials/head", { title: "Registro" }) %>
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="/css/register.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("contraseña");
@@ -26,39 +26,80 @@
     <main>
         <div class="contenedor">
         <h3>Registro</h3>
-        <form action="#" method="post" >
+        
+        
+        <form action="/user/register" method="POST" enctype="multipart/form-data">
+
             <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" 
+            value="<%= locals.oldData ? oldData.name : null %>">
+            <% if(locals.errors && errors.name){ %>
+                <p class="text-error">
+                    <%= errors.name.msg %>
+                </p>
+            <% } %>
 
             <label for="surname">Apellido</label>
-            <input type="text" id="surname" name="surname" required>
+            <input type="text" id="surname" name="surname" 
+            value="<%= locals.oldData ? oldData.surname : null  %>">
+            <% if(locals.errors && errors.surname){ %>
+                <p class="text-error">
+                    <%= errors.surname.msg %>
+                </p>
+            <% } %>
 
             <p>Genero</p>
             <div class="radio-block">
                 <div class="radio-block__element">
-                    <input type="radio" name="genre" id="M" value="M">
-                    <label for="M">Masculino</label>
+                    <label for="M">Masculino
+                    <input type="radio" name="gender" id="M" value="M">
+                    </label>
                 </div>
                 <div class="radio-block__element">
-                    <input type="radio" name="genre" id="F" value="F">
-                    <label for="F">Femenino</label>
+                    
+                    <label for="F">Femenino
+                        <input type="radio" name="gender" id="F" value="F">
+                    </label>
                 </div>
             </div>
+            <% if(locals.errors && errors.gender){ %>
+                <p class="text-error">
+                    <%= errors.gender.msg %>
+                </p>
+            <% } %>
 
             <div class="file-block">
                 <p class="text-file">Imagen de perfil</p>
                 <label for="uploadAvatar" class="labelUpload">Elegir Archivo</label>
-                <input type="file" id="uploadAvatar">
+                <input type="file" id="uploadAvatar" name="avatarFile">
             </div>
+            <% if(locals.errors && errors.avatarFile){ %>
+                <p class="text-error">
+                    <%= errors.avatarFile.msg %>
+                </p>
+            <% } %>
 
             <label for="email">Correo Electrónico</label>
-            <input type="text" id="email" name="email" required>
+            <input type="text" id="email" name="email" 
+            value="<%= locals.oldData ? oldData.email : null %>">
+            <% if(locals.errors && errors.email){ %>
+                <p class="text-error">
+                    <%= errors.email.msg %>
+                </p>
+            <% } %>
 
             <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" required>
-
+            <input type="password" id="contraseña" name="contraseña" >
+            
             <label for="confirmarContraseña">Confirme su contraseña</label>
-            <input type="password" id="confirmarContraseña" name="confirmarContraseña" required>
+            <input type="password" id="confirmarContraseña" name="password"
+            value="<%= locals.oldData ? oldData.password : null %>">
+            <% if(locals.errors && errors.password){ %>
+                <p class="text-error">
+                    <%= errors.password.msg %>
+                </p>
+            <% } %>
+            
 
             <input type="submit" value="Registrarse">
         </form>

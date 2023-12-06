@@ -6,6 +6,16 @@ products = productModel.getProduct();
 const productController = {
     index: (req, res) => res.render("products", { products }),
 
+    showProductList: (req, res) => {
+        const products = productModel.getProduct();
+        res.render('listaProductos', { products });
+    },
+
+    detail: function(req, res) {
+        let details = productModel.getProductById(req.params.id)
+        res.render ("productDetail", { details }); 
+    },
+
     showCreateView: (req, res) => res.render('createProduct'),
 
     create: (req, res) => {
@@ -14,20 +24,15 @@ const productController = {
             category: req.body.productCategory,
             name: req.body.productName,
             image: req.file ? req.file.filename : 'default.jpg',
-            price: req.body.productPrice,
-            discount: req.body.productDiscount,
-            stock: req.body.productStock,
-            description: req.body.productoDescription,
-            warranty: req.body.productWarranty,
-            rating: req.body.productRating,
+            price: parseFloat(req.body.productPrice),
+            discount: parseInt(req.body.productDiscount),
+            stock: parseInt(req.body.productStock),
+            description: req.body.productDescription,
+            warranty: parseInt(req.body.productWarranty),
+            rating: parseInt(req.body.productRating),
         }
         productModel.witeProduct(product);
         res.redirect('/product/lista-de-productos');
-    },
-
-    showProductList: (req, res) => {
-        const products = productModel.getProduct();
-        res.render('listaProductos', { products });
     },
 
     showEditView: (req, res) => {
@@ -44,8 +49,13 @@ const productController = {
         productModel.updateProduct(req.body.productId, req.body.productCategory, req.body.productName, req.body.image, req.body.productPrice, req.body.productDiscount, req.body.productStock, req.body.productDescription, req.body.productWarranty, req.body.productRating);
         res.redirect('/product/lista-de-productos');
     },
-    
-    
+
+    borrado:function (req, res) {
+        const id = req.params.id;
+        const actuProductos = products.filter((producto) => producto.id != id);
+        productModel.writeProducts(actuProductos);
+        res.redirect("/product/lista-de-productos");
+    }
 };
 
 module.exports = productController;

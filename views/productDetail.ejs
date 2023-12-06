@@ -20,7 +20,7 @@
         <section class="leftColumn">
             <div class="contentProductDetail">
                 <div class="vendedor">
-                    <a href="https://www.playstation.com/es-ar/" target="_blank">PlayStation</a>
+                    <a href="#" target="_blank"><%= details.category %></a>
                 </div>
                 <div class="productInformation">
                     <div class="productInformation__States">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="productName">
-                    <h1>Playstation 5 Original</h1>
+                    <h1><%= details.name %></h1>
                         <div class="productFavouriteIcon">
                             <label>
                                 <input type="checkbox" name="">
@@ -44,7 +44,7 @@
                 <div class="carrousel__container">
                     <div class="carrousel__sliderWrapper">
                         <div class="carrousel__slider">
-                            <img id="slide-1" src="/images/products/playstation5.jpg" alt="Playstation5__Image-1">
+                            <img id="slide-1" src="/images/products/<%=details.image%>" alt="<%=details.image%>">
                             <img id="slide-2" src="/images/products/playstation5-2.jpg" alt="Playstation5__Image-2">
                             <img id="slide-3" src="/images/products/playstation5-3.jpg" alt="Playstation5__Image-3">
                         </div>
@@ -56,9 +56,9 @@
                     </div>
                 </div>
                 <div class="price">
-                    <div class="realPrice">$634.999</div>
-                    <div class="priceWithDiscount">$507.999</div>
-                    <div class="discountPercentage">20% Off</div>
+                    <div class="realPrice">$<%= details.price%></div>
+                    <div class="priceWithDiscount">$<%= details.price - (details.price*details.discount/100) %></div>
+                    <div class="discountPercentage"><%= details.discount %>%OFF</div>
                 </div>
             </div>
         </section>
@@ -66,8 +66,8 @@
             <div class="contentProductDetail">
                 
                 <div class="purchaseInformation">
-                    <div class="warrantly">Garantía: 6 meses</div>
-                    <div class="avaibleStock">Stock Disponible: 25 unidades</div>
+                    <div class="warrantly"> Garantia:<%= details.warranty %> meses</div>
+                    <div class="avaibleStock">Stock Disponible: <%= details.stock %> unidades</div>
                     <div class="shipmentsTo">Envios a: Todo el país</div>
                 </div>
                 <div class="paymentMethods">
@@ -83,7 +83,7 @@
                         <div class="message__amount">Cantidad</div><div class="amount"><input type="number" placeholder="Indicar Cantidad"></div>
                     </div>
                     <div class="purchaseAction__border">
-                        <div class="message__stockReference">Stock Disponible</div><div class="stockReference">25 Unidades</div>
+                        <div class="message__stockReference">Stock Disponible</div><div class="stockReference"><%= details.stock %> unidades</div>
                     </div>
                 </div>
                 <div class="purchaseOptions">
@@ -94,23 +94,9 @@
         </section>
         <section class="columnBottom">
             <div class="productDescription">
-                <h2>DESCRIPCIÓN:</h2>
                 <p>
-                    Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.
-                    
-                    PlayStation renovó las expectativas del mundo virtual con esta nueva consola y su gran rendimiento. Cuenta con una interfaz de usuario más rápida y fácil de navegar que en anteriores modelos. Además, podrás jugar durante horas desafiando a millones de contrincantes alrededor del mundo que esperan nuevos retos.
-                    
-                    Calidad de otro nivel
-                    Se considera que esta consola es de las mejores dentro del mercado, dado que presenta una resolución de hasta 4K.
-                    
-                    Además, el control DualSense para PS5 combina estilo y tecnología para que jugar sea más cómodo e interactivo para todos sus jugadores.
-                    
-                    Adaptada a tus necesidades
-                    Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 825 GB.
-                    Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición.
-                    Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás.
-                    
-                    Vas a poder reproducir música, ver tus películas y series favoritas a través de las aplicaciones descargables.</p>
+                    <%= details.description %>
+                </p>
             </div>
             <div class="questionsToTheSeller">
                 <h3>Dejános tus Comentarios</h3>

@@ -74,6 +74,9 @@ header {
     display: none;
 }
 
+.text-error {
+    color: rgb(250, 33, 33);
+}
 
 /* Estilado del footer */
 
