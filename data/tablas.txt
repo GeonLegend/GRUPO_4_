@@ -1,0 +1,28 @@
+users
+id first_name last_name email password gender type_user country date_of_birth avatar
+
+user_type
+id name description
+
+user_product
+id id_user id_product date
+
+
+products
+id id_category name price discount stock description warranty rating img
+
+category
+id_category name
+
+brand
+id nombre id_product
+
+
+cart
+id id_user id_order 
+
+orders
+id id_product stock total_price method_of_pay status date address
+
+sales
+id id_cart date
