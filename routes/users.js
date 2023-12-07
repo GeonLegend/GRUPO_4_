@@ -6,6 +6,9 @@ const router = express.Router();
  
 router.get('/register', userController.registro);
 router.post('/register', multer.single("avatarFile"), validations, userController.proccessRegister);
-router.get('/login', userController.login);
+
+router.get('/login', userController.getLogin);
+router.post('/login', userController.postLogin);
+router.get('/logout', userController.logout);
 
 module.exports = router;

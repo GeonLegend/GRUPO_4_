@@ -15,25 +15,25 @@
         <p class="bienvenida">¡Te damos la bienvenida!</p>
         <div class="login">
             <p class="iniciar-sesion">INICIAR SESIÓN CON EMAIL</p>
-            <form action="/login">
-                <input type="text" name="usuario" placeholder="ingresar email">
-                <div class="switch-block">  
+            <form action="/user/login" method="POST">
+                <input type="email" name="email" placeholder="ingresar email">
+                <div class="switch-block">
                     <p>Recordar</p>
                     <input type="checkbox" name="recordar" id="toggle">
                     <label for="toggle" class="switch"></label>
                 </div>
-                <input type="password" name="contraseña" placeholder="ingresar contraseña">
-            </form>
-            <div class="options">
-                <p class="uno">
-                    <a href="/user/register" class="ancla">Registrarme</a>
-                </p>
-                <p class="dos">
-                    <a href="www." class="ancla">Olvide mi contraseña</a>
-                </p>
-            </div>
-            <form action="/login" class="enviar">
-                <input type="submit" name="Iniciar sesion" value="Login">
+                <input type="password" name="password" placeholder="ingresar contraseña">
+
+                <div class="options">
+                    <p class="uno">
+                        <a href="/user/register" class="ancla">Registrarme</a>
+                    </p>
+                    <p class="dos">
+                        <a href="www." class="ancla">Olvide mi contraseña</a>
+                    </p>
+                </div>
+                <input type="submit" >
+
             </form>
         </div>
     </main>

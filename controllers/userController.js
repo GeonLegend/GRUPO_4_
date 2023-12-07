@@ -3,7 +3,9 @@ const userModel = require("../data/model");
 
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const { Console } = require("console");
 
+const userss = require('../data/users.json');
 const users = userModel.getUsers();
 
 userController = {
@@ -35,10 +37,28 @@ userController = {
 
     },
 
-    login: (req, res) => res.render('login'),
-
+    getLogin: (req, res) => {
+        res.render('login', { errorMessage: '' });
+    },
+    postLogin: (req, res) => {
+        const { email, password } = req.body;
+        const user = userss.find(user => user.email === email && user.password === password);
+        if (user) {
+            req.session.user = user;
+            res.redirect('/');
+        } else {
+            res.render('login', { errorMessage: 'El usuario o contraseña es incorrecto' });
+        }
+    },
+    logout: (req, res) => {
+        req.session.user = null;
+        req.session.destroy((err) => {
+            if (err) {
+                console.log(err);
+            }
+            res.redirect('/');
+        });
+    }
 };
-
-
 
 module.exports = userController;
