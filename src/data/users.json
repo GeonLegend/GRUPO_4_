@@ -253,10 +253,10 @@
     "id": 26,
     "firstName": "asdfasdf",
     "lastName": "asdfasd",
-    "email": "asdfasdfasdf@gmail.coomas",
-    "password": "$2a$10$R/CDyBmZzUs4N111ZkPA2OXNlnU2t6P2Vsh3h0nplzEIX1ePNYd5u",
+    "email": "user@gmail.com",
+    "password": "$2a$10$ZSpqlWJgtIDkku62vRQ8nufQfZEzacIzSu8weeJssJJByqeEeYnUe",
     "gender": "M",
     "customer": "user",
-    "avatar": "default.png"
+    "avatar": "img-1701958795175.png"
   }
 ]
