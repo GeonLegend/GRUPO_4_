@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 /* const bodyParser = require('body-parser'); */
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 const rutasProductoDetalle = require('./routes/productDetail.js');
 const rutasCarrito = require('./routes/productCart.js');
@@ -16,12 +17,18 @@ const exp = require('constants');
 const PORT = process.env.PORT || 4444;
 app.listen(PORT, console.log('Escuchándo en el puerto ' + PORT));
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 app.use((methodOverride('_method')));
 app.use(express.static(path.join(__dirname, 'public')));
 /* app.use(bodyParser.urlencoded({ extended: false })); */
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({
+    secret: 'secret-key',
+    resave: false,
+    saveUninitialized: true
+}))
 
 app.use('/', rutasHome);
 app.use('/producto-detalle', rutasProductoDetalle);

@@ -10,7 +10,15 @@
     <header>
         <%- include("./partials/header") %>
     </header>
-
+    <h1>Bienvenido</h1>
+    <% if (user) { %>
+        <p>¡Hola <%= user.firstName %> <%= user.lastName %>! Bienvenido de vuelta.</p>
+        <img src="<%= user.avatar %>" alt="User Avatar" style="width: 100px; height: 100px;">
+        <a href="/auth/logout">Cerrar sesión</a>
+    <% } else { %>
+        <p>Inicia sesión</p>
+        <a href="/auth/login">Login</a>
+    <% } %>
     <main>
         <div class="carrusel-news">
             <button class="carrusel-arrow carrusel-left-arrow">

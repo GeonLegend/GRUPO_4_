@@ -258,15 +258,5 @@
     "gender": "M",
     "customer": "user",
     "avatar": "default.png"
-  },
-  {
-    "id": 27,
-    "firstName": "asdfasdf",
-    "lastName": "asdfasd",
-    "email": "asdfasdfasdf@gmail.coomas",
-    "password": "$2a$10$eOAdwfPRAtsN8XgQENw4n.4M8RohGVj/vJKnEQMFowAPRdQmwxYHC",
-    "gender": "M",
-    "customer": "user",
-    "avatar": "img-1699489335954.jpg"
   }
 ]
