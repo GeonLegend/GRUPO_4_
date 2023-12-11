@@ -8,21 +8,6 @@ CREATE TABLE user_type(
 	primary key(id)
 );
 
-CREATE TABLE category(
-	id				bigint unsigned not null auto_increment,
-    name			varchar(80) not null,
-    description		varchar(600),
-    primary key(id)
-);
-
-CREATE TABLE brand(
-	id 				bigint unsigned not null auto_increment,
-    name			varchar(300) not null,
-	description 	varchar(600),
-    id_product		bigint unsigned not null,
-    primary key(id)
-);
-
 CREATE TABLE users(
 	id				bigint unsigned not null auto_increment,
     first_name		varchar(120) not null,
@@ -33,26 +18,39 @@ CREATE TABLE users(
     country 		varchar(80) not null,
     date_of_birth	date not null,
     avatar			varchar(80) not null,
-    id_user_type	bigint unsigned not null,
+    id_user_type	bigint unsigned default 2,
     primary key(id),
     foreign key(id_user_type) references user_type(id)
+);
+
+CREATE TABLE category(
+	id				bigint unsigned not null auto_increment,
+    name			varchar(80) not null,
+    description		varchar(600),
+    primary key(id)
+);
+
+CREATE TABLE product_features(
+	id 				bigint unsigned not null auto_increment,
+    brand			varchar(300) not null,
+    stock			int unsigned not null default 0,
+    description 	varchar(1800) not null,
+	warranty		int not null default 0, 
+    rating 			float unsigned not null,
+    primary key(id)
 );
 
 CREATE TABLE products(
 	id 				bigint unsigned not null auto_increment,
     id_category		bigint unsigned not null,
-    id_brand		bigint unsigned not null,
+    id_product_features bigint unsigned not null,
     name 			varchar(120) not null,
     price 			float not null,
     discount 		int unsigned default 0,
-    stock			int unsigned not null default 0,
-    description 	varchar(1800) not null,
-    warranty		int not null,
-    rating 			float unsigned not null,
     img				varchar(300) not null,
     primary key(id),
     foreign key(id_category) references category(id),
-    foreign key(id_brand) references brand(id)
+    foreign key(id_product_features) references product_features(id)
 );
 
 CREATE TABLE user_product(

@@ -46,8 +46,9 @@ module.exports = (sequelize, DataTypes) => {
             },
             idUserType: {
                 type: DataTypes.BIGINT.UNSIGNED,
-                allowNull: false,
+                allowNull: true,
                 field: "id_user_type",
+                defaultValue: 2,
             },  
         },{
             tableName: "users",

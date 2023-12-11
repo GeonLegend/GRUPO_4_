@@ -8,7 +8,6 @@ const homeControlador = {
     inicio: (req, res) => res.render('home', { products: products }),
     userFind: (req, res) => {
         const user = req.session.user;
-        console.log(user)
         res.render('home', { user: user });
     }
 };
