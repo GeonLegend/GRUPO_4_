@@ -58,6 +58,12 @@ userController = {
             }
             res.redirect('/');
         });
+    },
+    showLogoutConfirmation: (req, res) => {
+        res.render('logoutConfirmation');
+    },
+    getUserProfile: (req, res) => {
+        res.render('userProfile');
     }
 };
 

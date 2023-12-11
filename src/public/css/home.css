@@ -195,7 +195,44 @@ main {
 
     transition: all 250ms;
 }
-
+.user-greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px 30px 80px;
+    max-height: 80px; 
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #1d1d1d; 
+  }
+  .user-avatar {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%; 
+    margin-right: 15px; 
+  }
+  .welcome-message {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    color: #3366cc; 
+    text-decoration: none;
+  }
+  .logout-link {
+    color: #ff0000; 
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+  }
+  .logout-link:hover {
+    transform: scale(1.2); 
+  }
+  
 @media (min-width: 577px){
     .floating-options ul li {
         width: 125px;

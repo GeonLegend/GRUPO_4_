@@ -9,16 +9,16 @@
 <body>
     <header>
         <%- include("./partials/header") %>
+        <% if (user) { %>
+        <div class="user-greeting">
+            <p class="welcome-message">
+            <img class="user-avatar" src="<%= user.avatar %>" alt="User Avatar">
+            ¡Hola&nbsp;<a href="/user/userProfile" class="user-name"><%= user.firstName %> <%= user.lastName %></a>! Bienvenid@ de vuelta.
+            </p>
+            <a class="logout-link" href="/user/confirmLogout">Cerrar sesión</a>
+        </div>
+        <% } %>
     </header>
-    <h1>Bienvenido</h1>
-    <% if (user) { %>
-        <p>¡Hola <%= user.firstName %> <%= user.lastName %>! Bienvenido de vuelta.</p>
-        <img src="<%= user.avatar %>" alt="User Avatar" style="width: 100px; height: 100px;">
-        <a href="/auth/logout">Cerrar sesión</a>
-    <% } else { %>
-        <p>Inicia sesión</p>
-        <a href="/auth/login">Login</a>
-    <% } %>
     <main>
         <div class="carrusel-news">
             <button class="carrusel-arrow carrusel-left-arrow">
