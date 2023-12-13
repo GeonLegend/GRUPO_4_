@@ -10,5 +10,7 @@ router.post('/register', multer.single("avatarFile"), validations, userControlle
 router.get('/login', userController.getLogin);
 router.post('/login', userController.postLogin);
 router.get('/logout', userController.logout);
+router.get('/confirmLogout', userController.showLogoutConfirmation);
+router.get('/userProfile', userController.getUserProfile)
 
 module.exports = router;

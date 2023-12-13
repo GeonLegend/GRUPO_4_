@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,  
                 field: "id_category",
             },
-            idBrand: {
+            idProductFeatures: {
                 type: DataTypes.BIGINT.UNSIGNED,
                 allowNull: false,
-                field: "id_brand",
+                field: "id_product_features",
             },
             name: {
                 type: DataTypes.STRING(120),
@@ -32,23 +32,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 defaultValue: 0,
             },
-            stock: {
-                type: DataTypes.INTEGER.UNSIGNED,
-                allowNull: false,
-                defaultValue: 0,
-            },
-            description: {
-                type: DataTypes.STRING(1800),
-                allowNull: false,
-            },
-            warranty: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
-            rating: {
-                type: DataTypes.FLOAT.UNSIGNED,
-                allowNull: false,
-            },
+            
             img: {
                 type: DataTypes.STRING(300),
                 allowNull: false,
@@ -64,9 +48,9 @@ module.exports = (sequelize, DataTypes) => {
             as: "categorias",
             foreignKey: "id_category"
         }),
-        Product.belongsTo(models.Brand, {
-            as: "marcas",
-            foreignKey: "id_brand"
+        Product.belongsTo(models.ProductFeatures, {
+            as: "productoCaracteristicas",
+            foreignKey: "id_product_features"
         }),
         Product.belongsToMany(models.User, {
             as: "usuarios",
