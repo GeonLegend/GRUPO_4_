@@ -20,7 +20,7 @@
     
                 <% products.forEach(product => { %>
                     <section class="card">
-                        <a href="" class="section-card">
+                        <a href="/product/<%=product.id%>" class="section-card">
                             <article class="section-card__img">
                                 <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
                             </article>

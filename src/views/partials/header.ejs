@@ -6,10 +6,12 @@
             </a>
         </div>
         <div class="header-search">
-            <input type="search" placeholder="Buscar productos">
-            <button>
-                <img src="/images/icons/search.png" alt="lupa" width="20px" height="20px">
-            </button>
+            <form action="/search" method="GET">
+                <input type="search" placeholder="Buscar productos" name="search">
+                <button type="submit">
+                    <img src="/images/icons/search.png" alt="lupa" width="20px" height="20px">
+                </button>
+            </form>
         </div>
         <div class="header-account">
             <a href="/user/login" class="account-a">
