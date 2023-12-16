@@ -6,11 +6,10 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 
 const rutasProductoDetalle = require('./routes/productDetail.js');
-const rutasCarrito = require('./routes/productCart.js');
+const rutasCarrito = require('./routes/cart.js');
 const rutasHome = require('./routes/home.js');
 const rutaProduct = require("./routes/products.js");
 const rutaUser = require("./routes/users.js");
-const rutaSearch = require('./routes/search.js');
 const prueba = require("./routes/prueba.js");
 
 const exp = require('constants');
@@ -32,7 +31,6 @@ app.use(session({
 }))
 
 app.use('/', rutasHome);
-app.use('/search', rutaSearch);
 app.use('/producto-detalle', rutasProductoDetalle);
 app.use('/carrito', rutasCarrito);
 app.use("/product", rutaProduct);

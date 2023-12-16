@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
+
     <div class="container">
         <h1>Crear producto</h1>
             <form  action="/product/crear-producto" method="POST">
@@ -35,5 +39,9 @@
                 <button type="submit">CREAR</button>
             </form>
     </div>
+
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
 </html>

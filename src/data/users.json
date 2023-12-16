@@ -248,25 +248,5 @@
     "gender": "F",
     "customer": "user",
     "avatar": "https://robohash.org/rerumdoloremaut.png?size=100x100&set=set1"
-  },
-  {
-    "id": 26,
-    "firstName": "asdfasdf",
-    "lastName": "asdfasd",
-    "email": "user@gmail.com",
-    "password": "$2a$10$ZSpqlWJgtIDkku62vRQ8nufQfZEzacIzSu8weeJssJJByqeEeYnUe",
-    "gender": "M",
-    "customer": "user",
-    "avatar": "img-1701958795175.png"
-  },
-  {
-    "id": 27,
-    "firstName": "asdfasdf",
-    "lastName": "asdfasd",
-    "email": "lx147812345@gmail.com",
-    "password": "$2a$10$yFqZW64Op6nqTGnwEoWRAOVCBaCh5m9Ve55HVBwcByTBbtNPCuOKG",
-    "gender": "M",
-    "customer": "user",
-    "avatar": "img-1702332235616.png"
   }
 ]

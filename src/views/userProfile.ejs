@@ -13,33 +13,50 @@
     </header>
     <main>
         <div class="profile-container">
-            <h1>Bienvenido a tu perfil de usuario</h1>
+            <% if(rol.name == "admin") {%>
+                    <h1>Bienvenido usuario administrador</h1>
+            <% } %>
+            <% if(rol.name == "user") {%>
+                    <h1>Bienvenido a tu perfil de usuarios</h1>
+            <% } %>
             <div class="user-info">
             <div class="row">
-                <div class="label">Avatar:</div>
-                <div class="value"><img class="avatar" src="https://robohash.org/omnisquiipsa.png?size=100x100&set=set1" alt="Avatar"></div>
+                <div class="value"><img class="avatar" src="/images/profile/<%= user.avatar %>" alt="Avatar" width="200" height="200"></div>
             </div>
             <div class="row">
                 <div class="label">Nombre:</div>
-                <div class="value">Leshia Pinniger</div>
+                <div class="value"><%= user.firstName %></div>
             </div>
             <div class="row">
-                <div class="label">Correo Electrónico:</div>
-                <div class="value">leshiapinniger@gmail.com</div>
+                <div class="label">Apellido:</div>
+                <div class="value"><%= user.lastName %></div>
             </div>
             <div class="row">
                 <div class="label">Género:</div>
-                <div class="value">F</div>
+                <div class="value"><%= user.gender %></div>
             </div>
             <div class="row">
-                <div class="label">Rol:</div>
-                <div class="value">admin</div>
+                <div class="label">País: </div>
+                <div class="value"><%= user.country %></div>
+            </div>
+            <div class="row">
+                <div class="label">Fecha de nacimiento: </div>
+                <div class="value"><%= user.dateOfBirth %></div>
+            </div>
+            <div class="row">
+                <div class="label">Correo Electrónico:</div>
+                <div class="value"><%= user.email %></div>
+            </div>
+            <div class="row">
+                <div class="label">Contraseña: </div>
+                <div class="value"><%= user.password %></div>
             </div>
             </div>
             <div class="edit-section">
             <button class="edit-button">Editar perfil</button>
             </div>
         </div>
+        
     </main>
 </body>
 </html>

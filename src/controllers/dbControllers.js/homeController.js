@@ -3,12 +3,21 @@ const db = require('../../database/models');
 const sequelize = db.sequelize;
 
 const homeControlador = {
-    
     userFind: async (req, res) => {
         const user = req.session.user;
-
+        
         let products = await db.Product.findAll();
-        res.render("home", { products, user: user})
+        res.render("home", { products, user: user});
+    },
+
+    findProduct: async(req, res) => {
+        const products = await db.Product.findAll();
+        
+        let findProducts = products.filter(product => {
+            return product.name.toLowerCase().includes(req.query.search) || product.name.includes(req.query.search)
+        });        
+
+        res.render('products', { products: findProducts})
     }
 };
 
