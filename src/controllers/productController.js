@@ -31,7 +31,7 @@ const productController = {
             warranty: parseInt(req.body.productWarranty),
             rating: parseInt(req.body.productRating),
         }
-        productModel.witeProduct(product);
+        productModel.witeProduct(product);        
         res.redirect('/product/lista-de-productos');
     },
 

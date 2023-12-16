@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/userProfile.css">
   <title>Perfil de Usuario</title>
-  <%- include("./partials/head", { title: "Home" }) %>        
+  <%- include("./partials/head", { title: "Perfil" }) %>        
 </head>
 <body>
     <header>
@@ -54,9 +54,13 @@
             </div>
             <div class="edit-section">
             <button class="edit-button">Editar perfil</button>
+            <a class="logout-link" href="/user/confirmLogout">Cerrar sesión</a>
             </div>
         </div>
         
     </main>
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
 </html>

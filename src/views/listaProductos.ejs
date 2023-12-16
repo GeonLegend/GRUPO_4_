@@ -12,18 +12,18 @@
         <%- include("./partials/header") %>
     </header>
 
-    <h1>Mis Productos</h1>
-    <a href="/product/vista-crear-producto">
-        <h3>Añadir un nuevo producto</h3>
-    </a>
-    <div class="container">
-        <ul>
+    <main class="container">
+        <h1 class="main-title">Mis Productos</h1>
+        <a href="/product/vista-crear-producto" class="enlaces">
+            <h3>Añadir un nuevo producto</h3>
+        </a>
+        <ul class="product-list">
             <% products.forEach(function(product) { %>
-                <li>
+                <li class="product-item">
                     <strong>Categoria:</strong> <%= product.category %><br>
                     <strong>Nombre:</strong> <%= product.name %><br>
                     <article class="section-card__img">
-                        <img src="/images/products/<%= product.image %>" alt="<%= product.image %>" width="300px">
+                        <img src="/images/products/<%= product.image %>" alt="<%= product.image %>" width="300px" class="product-image">
                     </article>
                     <strong>Precio:</strong> $<%= product.price %><br>
                     <strong>Descuento:</strong> $<%= product.discount %><br>
@@ -31,12 +31,12 @@
                     <strong>Descripcion:</strong> <%= product.description %><br>
                     <strong>Garantía:</strong> <%= product.warranty %> meses<br>
                     <strong>Rating:</strong> <%= product.rating %><br>
-                    <a href="/product/vista-editar-producto/<%= product.id %>">Editar</a>
-                    <a href="/product/eliminar/<%= product.id %>">Eliminar</a>
+                    <a href="/product/vista-editar-producto/<%= product.id %>" class="enlaces">Editar</a>
+                    <a href="/product/eliminar/<%= product.id %> " class="enlaces">Eliminar</a>
                 </li>
             <% }); %>
         </ul>
-    </div>
+    </main>
 
     <footer>
         <%- include("./partials/footer") %>

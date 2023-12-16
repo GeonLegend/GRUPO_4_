@@ -51,4 +51,11 @@ body {
     border-radius: 5px;
   }
   
-  
+  .logout-link {
+    color: #ff0000; 
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+  }
+  .logout-link:hover {
+    transform: scale(1.2); 
+  }

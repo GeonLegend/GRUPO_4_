@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Producto</title>
-    <link rel="stylesheet" href="/css/editProduct.css">
+    <%- include("./partials/head", { title: "Home" }) %>
+    <link rel="stylesheet" href="/css/listaProductos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -14,9 +12,9 @@
         <%- include("./partials/header") %>
     </header>
 
-    <div class="container">
-        <h1>Crear producto</h1>
-            <form  action="/product/crear-producto" method="POST">
+    <main class="container">
+        <h1 class="main-title">Crear producto</h1>
+            <form  action="/product/crear-producto" method="POST" enctype="multipart/form-data" class="product-form">
                 <input type="hidden" name="productId">
                 <label for="productCategory">Categoría del Producto:</label>
                 <input type="text"  name="productCategory">
@@ -36,9 +34,9 @@
                 <input type="number"  name="productWarranty" step="0.01">
                 <label for="productRating">Rating del Producto:</label>
                 <input type="number"  name="productRating" step="0.01">
-                <button type="submit">CREAR</button>
+                <button type="submit" class="edit-product-btn">CREAR</button>
             </form>
-    </div>
+    </main>
 
     <footer>
         <%- include("./partials/footer") %>

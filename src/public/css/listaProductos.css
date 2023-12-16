@@ -2,15 +2,19 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
+}
+
+main{
     padding: 20px;
 }
-h1 {
+
+.main-title{
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
 
-ul {
+.product-list{
     list-style: none;
     padding: 0;
     display: flex;
@@ -18,7 +22,7 @@ ul {
     justify-content: space-around;
 }
 
-li {
+.product-item {
     background-color: #f0f9f0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -31,7 +35,7 @@ li {
     transition: box-shadow 0.3s;
 }
 
-li:hover {
+.product-item:hover {
     box-shadow: 0 0 20px rgba(0, 100, 0, 0.7);
 }
 
@@ -40,12 +44,12 @@ li:hover {
     margin: 20px 0;
 }
 
-img {
+.product-image {
     max-width: 100%;
     border-radius: 5px;
 }
 
-a {
+.enlaces {
     display: block;
     text-align: center;
     margin-top: 10px;
@@ -57,12 +61,12 @@ a {
     transition: background-color 0.3s;
 }
 
-a:hover {
+.enlaces:hover {
     background-color: #408e6b;
 }
 
-form {
-    background-color: #e6f5e6;
+.product-form {
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -91,7 +95,7 @@ input[type="file"] {
     margin-bottom: 15px;
 }
 
-button {
+.edit-product-btn {
     width: calc(100% - 20px);
     padding: 10px;
     background-color: #49a078;
@@ -100,4 +104,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.edit-product-btn:hover {
+    background-color: #408e6b;
+}
+
+textarea:hover,
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="file"]:hover {
+    border: 1px solid #49a078;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+    outline: none;
+    border: 1px solid #49a078;
+    box-shadow: 0 0 5px #49a078;
 }

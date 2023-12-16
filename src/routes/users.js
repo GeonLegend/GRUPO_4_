@@ -1,7 +1,7 @@
 const userController = require("../controllers/userController");
 const dbUserController = require("../controllers/dbControllers.js/userController");
 const express = require('express');
-const multer = require("../middlewares/multer");
+const multer = require("../middlewares/multerUser");
 const validations = require("../middlewares/express-validator");
 const router = express.Router();
  

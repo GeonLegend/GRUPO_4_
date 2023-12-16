@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include("./partials/head", { title: "Login" }) %>
-    <link rel="stylesheet" href="/css/editProduct.css">
+    <link rel="stylesheet" href="/css/listaProductos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -12,9 +12,9 @@
         <%- include("./partials/header") %>
     </header>
 
-    <div class="container">
-        <h1>Editar Producto</h1>
-            <form action="/product/editar-producto?_method=PUT" method="POST" >
+    <main class="container">
+        <h1 class="main-title">Editar Producto</h1>
+            <form action="/product/editar-producto?_method=PUT" method="POST" class="product-form">
                 <input type="hidden" name="productId" value="<%= product.id %>">
                 <label for="productCategory">Categoría del Producto:</label>
                 <input type="text"  name="productCategory" value="<%= product.category %>">
@@ -34,9 +34,9 @@
                 <input type="number"  name="productWarranty" step="0.01" value="<%= product.warranty %>">
                 <label for="productRating">Rating del Producto:</label>
                 <input type="number"  name="productRating" step="0.01" value="<%= product.rating %>">
-                <button type="submit">Guardar Cambios</button>
+                <button type="submit" class="edit-product-btn">Guardar Cambios</button>
             </form>
-    </div>
+    </main>
 
     <footer>
         <%- include("./partials/footer") %>
