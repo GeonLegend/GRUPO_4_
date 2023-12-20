@@ -23,7 +23,7 @@ module.exports = {
         }); 
         /* bcrypt.compare(user.password, password */
         if (user) {
-            req.session.user = user;
+            req.session.user = user;            ;
             res.redirect('/');
         } else {
             res.render('login', { errorMessage: 'El usuario o contraseña es incorrecto' });

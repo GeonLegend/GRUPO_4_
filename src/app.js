@@ -15,6 +15,7 @@ const prueba = require("./routes/prueba.js");
 const exp = require('constants');
 
 const PORT = process.env.PORT || 4444;
+
 app.listen(PORT, console.log('Escuchándo en el puerto ' + PORT));
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +29,15 @@ app.use(session({
     secret: 'secret-key',
     resave: false,
     saveUninitialized: true
-}))
+}));
+
+app.use((req, res, next) => {
+    // Compartir datos comunes entre todas las vistas solo si el usuario esta logueado
+    if(req.session.user)  {
+        res.locals.user = req.session.user;
+    }  
+    next();
+});
 
 app.use('/', rutasHome);
 app.use('/producto-detalle', rutasProductoDetalle);

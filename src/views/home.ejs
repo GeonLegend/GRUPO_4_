@@ -9,7 +9,7 @@
 <body>
     <header>
         <%- include("./partials/header") %>
-        <% if (user) { %>
+        <% if (locals.user) { %>
         <div class="user-greeting">
             <p class="welcome-message">
             <img class="user-avatar" src="/images/profile/<%= user.avatar %>" alt="User Avatar">

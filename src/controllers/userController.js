@@ -17,6 +17,7 @@ userController = {
         if (resultValidation.errors.length > 0) {
             return res.render("register", {            
                 errors: resultValidation.mapped(),
+                file: req.file,
                 oldData: req.body
             })
         }
@@ -33,8 +34,6 @@ userController = {
         };
         userModel.writeUser(user);
         return res.redirect("/");
-
-
     },
 
     getLogin: (req, res) => {
