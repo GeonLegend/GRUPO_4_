@@ -47,7 +47,7 @@ CREATE TABLE products(
     name 			varchar(120) not null,
     price 			float not null,
     discount 		int unsigned default 0,
-    img				varchar(300) not null,
+    image				varchar(300) not null,
     primary key(id),
     foreign key(id_category) references category(id),
     foreign key(id_product_features) references product_features(id)

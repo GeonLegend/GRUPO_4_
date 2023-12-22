@@ -28,7 +28,7 @@ INSERT INTO product_features (brand, stock, description, warranty, rating) VALUE
 ('Intel Core i7-13700K', 52, 'Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos. Núcleos: el corazón del procesador En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto. Máxima potencia Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil. ¡Descubrí el abanico de posibilidades que esta función te ofrece!', 48, 4.2);
 
 -- TABLA PRODUCTS
-INSERT INTO products (id_category, id_product_features, name, price, discount, img) VALUES
+INSERT INTO products (id_category, id_product_features, name, price, discount, image) VALUES
 (1, 1, 'Sony PlayStation 5', 620000, 21, 'playstation5.jpg'),
 (1, 2, 'Microsoft Xbox Series S', 509676, 0, 'product2.jpg'),
 (2, 3, 'Xiaomi Redmi Note 11', 143169, 31, 'product3.jpg'),
