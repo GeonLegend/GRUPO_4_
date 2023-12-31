@@ -4,18 +4,6 @@
     <%- include("./partials/head", { title: "Registro" }) %>
     <link rel="stylesheet" href="/css/register.css">
     <script src="../js/registrationValidation.js">
-        /* document.addEventListener("DOMContentLoaded", function () {
-            const password = document.getElementById("contraseña");
-            const confirmPassword = document.getElementById("confirmarContraseña");
-
-            confirmPassword.addEventListener("input", function () {
-                if (confirmPassword.value !== password.value) {
-                    confirmPassword.setCustomValidity("Las contraseñas no coinciden");
-                } else {
-                    confirmPassword.setCustomValidity("");
-                }
-            });
-        }); */
     </script>
 </head>
 <body>
@@ -52,7 +40,7 @@
                     <%= errors.surname.msg %>
                 </p>
             <% } %>
-<!-- ________________________________________________________ Hacer la validacion del gender para el lado del fronted________________________ -->
+
             <p>Genero</p>
             <p class="genderp" style="color: #555;"></p>
             <div class="radio-block">
@@ -72,6 +60,18 @@
             <% if(locals.errors && errors.gender){ %>
                 <p class="text-error">
                     <%= errors.gender.msg %>
+                </p>
+            <% } %>
+
+            <label for="country">País</label>
+            <div class="input-container">
+                <input type="text" id="country" name="country" class="input-text"
+                value="<%= locals.oldData ? oldData.country : null  %>">
+                <p class="input-container__item countryp"></p>
+            </div>
+            <% if(locals.errors && errors.country){ %>
+                <p class="text-error">
+                    <%= errors.country.msg %>
                 </p>
             <% } %>
 

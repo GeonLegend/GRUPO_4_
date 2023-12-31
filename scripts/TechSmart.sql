@@ -16,9 +16,8 @@ CREATE TABLE users(
     email 			varchar(120) not null,
     gender 			varchar(1)	not null,
     country 		varchar(80) not null,
-    date_of_birth	date not null,
     avatar			varchar(80) not null,
-    id_user_type	bigint unsigned default 2,
+    id_user_type	bigint unsigned default 3,
     primary key(id),
     foreign key(id_user_type) references user_type(id)
 );
@@ -47,7 +46,7 @@ CREATE TABLE products(
     name 			varchar(120) not null,
     price 			float not null,
     discount 		int unsigned default 0,
-    img				varchar(300) not null,
+    image			varchar(300) not null default "default.png",
     primary key(id),
     foreign key(id_category) references category(id),
     foreign key(id_product_features) references product_features(id)

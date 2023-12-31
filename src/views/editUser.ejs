@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/userProfile.css">
+    <title>Perfil de Usuario</title>
+    <%- include("./partials/head", { title: "Perfil" }) %>
+</head>
+
+<body>
+    <header>
+        <%- include("./partials/header") %>
+    </header>
+    <main>
+        <% if(locals.user) {%>
+            <div class="profile-container">
+                <% if(locals.rol.name) {%>
+                    <h1>Bienvenido a tu perfil de <%= rol.description %>
+                    </h1>
+                    <% } %>
+                    <form action="/user/userProfile/edit?_method=PUT" method="POST">
+                        <div class="user-info">
+                            <div class="row">
+                                <div class="value"><img class="avatar" src="/images/profile/<%= user.avatar %>"
+                                        alt="Avatar" width="200" height="200"></div>
+                            </div>
+                            <div class="row">
+                                <div class="label">Nombre:</div>
+                                <input type="text" class="value" name="name" value="<%= user.firstName %>">
+                            </div>
+                            <div class="row">
+                                <div class="label">Apellido:</div>
+                                <input type="text" class="value" name="surname" value="<%= user.lastName %>">
+                            </div>
+                            <div class="row">
+                                <div class="label">Género:</div>
+                                <input type="text" class="value" name="gender" value="<%= user.gender %>">
+                            </div>
+                            <div class="row">
+                                <div class="label">País: </div>
+                                <input type="text" class="value" name="country" value="<%= user.country %>">
+                            </div>
+                            <div class="row">
+                                <div class="label">Correo Electrónico:</div>
+                                <input type="text" class="value" name="email" value="<%= user.email %>">
+                            </div>
+                            <div class="row">
+                                <div class="label">Contraseña: </div>
+                                <input type="text" class="value" name="password" value="<%= user.password %>">
+                            </div>
+                        </div>
+                        <div class="edit-section">
+                            <button class="edit-button" type="submit">Aceptar</button>
+                        </div>
+                    </form>
+            </div>
+            <% } %>
+    </main>
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
+</body>
+
+</html>

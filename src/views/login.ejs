@@ -4,6 +4,8 @@
 <head>
     <%- include("./partials/head", { title: "Login" }) %>
         <link rel="stylesheet" href="/css/login.css">
+
+    <script src="../js/loginValitation.js"></script>
 </head>
 
 <body>
@@ -15,14 +17,33 @@
         <p class="bienvenida">¡Te damos la bienvenida!</p>
         <div class="login">
             <p class="iniciar-sesion">INICIAR SESIÓN CON EMAIL</p>
-            <form action="/user/login" method="POST">
-                <input type="email" name="email" placeholder="ingresar email">
+            <form action="/user/login" method="POST" class="loginForm">
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="ingresar email" id="email"
+                    value="<%= locals.oldData ? oldData.email : null %>">
+                    <p class="input-container__item emailp"></p>
+                </div>
+                <% if(locals.errors && errors.email){ %>
+                    <p class="text-error">
+                        <%= errors.email.msg %>
+                    </p>
+                <% } %>
+
                 <div class="switch-block">
                     <p>Recordar</p>
-                    <input type="checkbox" name="recordar" id="toggle">
+                    <input type="checkbox" name="remember" id="toggle">
                     <label for="toggle" class="switch"></label>
                 </div>
-                <input type="password" name="password" placeholder="ingresar contraseña">
+
+                <div class="input-container">
+                    <input type="password" name="password" placeholder="ingresar contraseña" id="password">
+                    <p class="input-container__item passwordp"></p>
+                </div>
+                <% if(locals.errors && errors.password){ %>
+                    <p class="text-error">
+                        <%= errors.password.msg %>
+                    </p>
+                <% } %>
 
                 <div class="options">
                     <p class="uno">
@@ -32,7 +53,7 @@
                         <a href="www." class="ancla">Olvide mi contraseña</a>
                     </p>
                 </div>
-                <input type="submit" >
+                <input type="submit">
 
             </form>
         </div>

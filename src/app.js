@@ -4,13 +4,15 @@ const path = require('path');
 /* const bodyParser = require('body-parser'); */
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookies = require("cookie-parser");
 
-const rutasProductoDetalle = require('./routes/productDetail.js');
 const rutasCarrito = require('./routes/cart.js');
 const rutasHome = require('./routes/home.js');
 const rutaProduct = require("./routes/products.js");
 const rutaUser = require("./routes/users.js");
-const prueba = require("./routes/prueba.js");
+const productApi = require("./routes/apis/products.js");
+const countApi = require("./routes/apis/totals.js");
+const userIsLogged = require('./middlewares/userIsLogged.js');
 
 const exp = require('constants');
 
@@ -30,22 +32,24 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+app.use(cookies());
 
+/* Verifica si el usuario esta logueado y guarda el dato en sesion */
+app.use(userIsLogged);
+
+/* Aceptar politicas de nose del sevidor para las apis */
 app.use((req, res, next) => {
-    // Compartir datos comunes entre todas las vistas solo si el usuario esta logueado
-    if(req.session.user)  {
-        res.locals.user = req.session.user;
-    }  
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
     next();
-});
+  });
 
+  /* RUTAS */
 app.use('/', rutasHome);
-app.use('/producto-detalle', rutasProductoDetalle);
 app.use('/carrito', rutasCarrito);
 app.use("/product", rutaProduct);
 app.use("/user", rutaUser);
-
-app.use("/", prueba);
+app.use("/api/", countApi);
+app.use("/api/product", productApi);
 
 /* Comandos para instalar los modulos */
 /* npm init */

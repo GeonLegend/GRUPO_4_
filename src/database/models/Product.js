@@ -9,16 +9,6 @@ module.exports = (sequelize, DataTypes) => {
                 autoIncrement: true,
                 allowNull: false,
             },
-            idCategory: {
-                type: DataTypes.INTEGER.UNSIGNED,
-                allowNull: false,  
-                field: "id_category",
-            },
-            idProductFeatures: {
-                type: DataTypes.BIGINT.UNSIGNED,
-                allowNull: false,
-                field: "id_product_features",
-            },
             name: {
                 type: DataTypes.STRING(120),
                 allowNull: false,
@@ -36,7 +26,18 @@ module.exports = (sequelize, DataTypes) => {
             image: {
                 type: DataTypes.STRING(300),
                 allowNull: false,
-            }
+                defaultValue: "default.png",
+            },
+            idCategory: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: false,  
+                field: "id_category",
+            },
+            idProductFeatures: {
+                type: DataTypes.BIGINT.UNSIGNED,
+                allowNull: false,
+                field: "id_product_features",
+            },
         },{
             tableName: "products",
             timestamps: false,

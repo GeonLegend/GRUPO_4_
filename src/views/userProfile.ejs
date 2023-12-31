@@ -12,12 +12,10 @@
         <%- include("./partials/header") %>
     </header>
     <main>
+        <% if(locals.user) {%>
         <div class="profile-container">
-            <% if(rol.name == "admin") {%>
-                    <h1>Bienvenido usuario administrador</h1>
-            <% } %>
-            <% if(rol.name == "user") {%>
-                    <h1>Bienvenido a tu perfil de usuarios</h1>
+            <% if(locals.rol.name) {%>
+                    <h1>Bienvenido a tu perfil de <%= rol.description %></h1>
             <% } %>
             <div class="user-info">
             <div class="row">
@@ -38,11 +36,7 @@
             <div class="row">
                 <div class="label">País: </div>
                 <div class="value"><%= user.country %></div>
-            </div>
-            <div class="row">
-                <div class="label">Fecha de nacimiento: </div>
-                <div class="value"><%= user.dateOfBirth %></div>
-            </div>
+            </div>                
             <div class="row">
                 <div class="label">Correo Electrónico:</div>
                 <div class="value"><%= user.email %></div>
@@ -53,11 +47,12 @@
             </div>
             </div>
             <div class="edit-section">
-            <button class="edit-button">Editar perfil</button>
+                <a href="/user/userProfile/edit"><button class="edit-button">Editar perfil</button></a>
+            
             <a class="logout-link" href="/user/confirmLogout">Cerrar sesión</a>
             </div>
         </div>
-        
+        <% } %>
     </main>
     <footer>
         <%- include("./partials/footer") %>

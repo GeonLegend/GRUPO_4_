@@ -31,16 +31,6 @@ input[type="file"]{
     margin-bottom: 15px;
 }
 
-.valid-field{
-    outline: solid 2px #49a078;
-    outline-offset: -1px;
-}
-
-.invalid-field{
-    outline: 2px solid red;
-    outline-offset: -1px;
-}
-
 input[type="submit"] {
     background-color: white;
     color: #49a078;
@@ -96,16 +86,4 @@ input[type="submit"]:hover{
     color: white;
 }
 
-.input-container {
-    position: relative;
-  }
-  
-.input-container__item {
-    
-    position: absolute;
-    top: 20%;
-    right: 5px; 
-    color: #555;  /* Ajusta según sea necesario para el color del texto */
-    pointer-events: none;  /* Permite hacer clic a través del texto */
-  }
 

@@ -22,10 +22,8 @@ let validations = [
             }
             return true;
         }),
-    /* check("country").notEmpty().withMessage("Tienes que elegir un pais"), */
-    /* check("age")
-        .notEmpty().withMessage("Tienes que escribir tu edad").bail()
-        .isInt().withMessage("Elige una edad"), */
+    check("country").notEmpty().withMessage("Tienes que elegir un pais").bail()
+        .isLength({ min: 2 }).withMessage("Elije un pais válido"),
     check("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
         .isLength({ min: 8 }).withMessage("La contraseña debe tener un minimo de 8 characteres").bail()

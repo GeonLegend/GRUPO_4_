@@ -3,15 +3,16 @@ USE TechSmart;
 -- TABLA USER-TYPE
 INSERT INTO user_type (name, description) VALUES
 ('admin', 'Administrador'),
+('seller', 'Vendedor'),
 ('user', 'Usuario');
 
 -- TABLA USERS
-INSERT INTO users (first_name, last_name, password, email, gender, country, date_of_birth, avatar, id_user_type) VALUES
-('Leshia', 'Pinniger', 'cH9404){|xq', 'leshiapinniger@gmail.com', 'F', 'Finland', '1990-01-01', 'https://robohash.org/omnisquiipsa.png?size=100x100&set=set1', 1),
-('Madelene', 'Lanston', 'wD5255,){+', 'madelenelanston@gmail.com', 'F', 'Greek', '1992-05-15', 'https://robohash.org/illoquamsunt.png?size=100x100&set=set1', 1),
-('Melinda', 'Meharry', 'pT9371|`f$s#OKaA', 'melindameharry@gmail.com', 'F', 'Argentina', '1985-11-22', 'https://robohash.org/ipsavoluptatesuscipit.png?size=100x100&set=set1', 1),
-('Pauly', 'Robken', 'lP2601~?E', 'paulyrobken@gmail.com', 'M', 'Peru', '1988-07-10', 'https://robohash.org/suntvoluptatemamet.png?size=100x100&set=set1', 1),
-('Gay', 'Graeme', 'eY0732\'@', 'gaygraeme@gmail.com', 'M', 'Botswana', '1995-03-18', 'https://robohash.org/officiaaccusamuseius.png?size=100x100&set=set1', 1);
+INSERT INTO users (first_name, last_name, password, email, gender, country, avatar, id_user_type) VALUES
+('supreme', 'admin', '$2a$10$1D1eYVK1EXtT5tT/2Tuzi..kt5PAbhkJDlzkdoe41YF0Z.Dt0KEui', 'admin@gmail.com', 'F', 'Finland', 'default.png', 1),
+('default', 'seller', '$2a$10$X1h/k18VODFpEcFdfZ7DT.Zs3VV18TbduqYJ933sneQypvYEzh5k.', 'vendedor@gmail.com', 'M', 'Argentina', 'default.png', 2),
+('Angela', 'Ovando', '$2a$10$zK4stzKEZ6SPIFmBBS.e.Ozc3D7UvuBfg0eOWMR12dRbYExc8AJsK', 'angelaovando@gmail.com', 'F', 'Argentina', 'default.png', 2),
+('Sofia', 'Gutierrez', '$2a$10$rMfu.d9HeOFJnx/uYGzJPu9GIkufkOLIZMRwiyQ0hcDLS55FhueOu', 'sofiagutierrez@gmail.com', 'M', 'Argentina', 'default.png', 2),
+('default', 'user', '$2a$10$srjVegEMxYCGG7zrjSt7zuVLvGMoFKxPJ6adhBwEMWwiWh0nOT4qi', 'user@gmail.com', 'M', 'Argentina', 'default.png', 3);
 
 -- TABLA CATEGORY
 INSERT INTO category (name, description) VALUES
@@ -28,7 +29,7 @@ INSERT INTO product_features (brand, stock, description, warranty, rating) VALUE
 ('Intel Core i7-13700K', 52, 'Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos. Núcleos: el corazón del procesador En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto. Máxima potencia Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil. ¡Descubrí el abanico de posibilidades que esta función te ofrece!', 48, 4.2);
 
 -- TABLA PRODUCTS
-INSERT INTO products (id_category, id_product_features, name, price, discount, img) VALUES
+INSERT INTO products (id_category, id_product_features, name, price, discount, image) VALUES
 (1, 1, 'Sony PlayStation 5', 620000, 21, 'playstation5.jpg'),
 (1, 2, 'Microsoft Xbox Series S', 509676, 0, 'product2.jpg'),
 (2, 3, 'Xiaomi Redmi Note 11', 143169, 31, 'product3.jpg'),
@@ -36,6 +37,7 @@ INSERT INTO products (id_category, id_product_features, name, price, discount, i
 (3, 5, 'Intel Core i7-13700K', 102201, 40, 'product5.jpg');
 
 -- TABLA USER_PRODUCT
+ /*
 INSERT INTO user_product (id_user, id_product, date) VALUES
 (1, 1, '2023-01-01'),
 (2, 2, '2023-02-15'),
@@ -43,20 +45,5 @@ INSERT INTO user_product (id_user, id_product, date) VALUES
 (4, 4, '2023-04-05'),
 (5, 5, '2023-04-10');
 
--- TABLA ORDERS
-INSERT INTO orders (id_product, stock, total_price, method_of_pay, status, date, address) VALUES
-(1, 2, 1240000, 'Credit Card', 'Pending', '2023-01-05', 'B° San Martin N° 435'),
-(2, 1, 509676, 'PayPal', 'Shipped', '2023-02-20', 'B° Los Andres N° 546'),
-(3, 3, '429507', 'Cash', 'Delivered', '2023-03-28', 'B° Doncellas N° 25');
+*/
 
--- TABLA CART
-INSERT INTO cart (id_user, id_order) VALUES
-(1, 1),
-(2, 2),
-(3, 3);
-
--- TABLA SALES
-INSERT INTO sales (id_cart, date) VALUES
-(1, '2023-01-05'),
-(2, '2023-02-20'),
-(3, '2023-03-28');

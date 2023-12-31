@@ -9,13 +9,15 @@ const userss = require('../data/users.json');
 const users = userModel.getUsers();
 
 userController = {
-    registro: (req, res) => res.render('register'),
-
+    registro: (req, res) => {
+        res.cookie("testing", "Hola Mundo", { maxAge: 60000 })
+        res.render('register');
+    },
     proccessRegister: (req, res, next) => {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render("register", {            
+            return res.render("register", {
                 errors: resultValidation.mapped(),
                 file: req.file,
                 oldData: req.body
@@ -49,6 +51,11 @@ userController = {
             res.render('login', { errorMessage: 'El usuario o contraseña es incorrecto' });
         }
     },
+    
+    showLogoutConfirmation: (req, res) => {
+        res.render('logoutConfirmation');
+    },
+
     logout: (req, res) => {
         req.session.user = null;
         req.session.destroy((err) => {
@@ -58,11 +65,9 @@ userController = {
             res.redirect('/');
         });
     },
-    showLogoutConfirmation: (req, res) => {
-        res.render('logoutConfirmation');
-    },
+    
     getUserProfile: (req, res) => {
-        res.render('userProfile');
+        res.render('userProfile', { user: req.session.user, rol});
     }
 };
 

@@ -35,11 +35,6 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(80),
                 allowNull: false,
             },
-            dateOfBirth: {
-                type: DataTypes.DATE,
-                allowNull: false,
-                field: "date_of_birth",
-            },
             avatar: {
                 type: DataTypes.STRING(80),
                 allowNull: false,
@@ -48,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.BIGINT.UNSIGNED,
                 allowNull: true,
                 field: "id_user_type",
-                defaultValue: 2,
+                defaultValue: 3,
             },  
         },{
             tableName: "users",

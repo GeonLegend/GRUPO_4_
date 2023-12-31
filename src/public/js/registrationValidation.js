@@ -9,6 +9,7 @@ window.addEventListener("load", () => {
     const email = document.getElementById("email");
     const contraseña = document.getElementById("contraseña");
     const confirmarContraseña = document.getElementById("confirmarContraseña");
+    const country = document.getElementById("country");
 
     /* Funcion para validar si existe una clase borrarla y agregarle otra clase */
     function validfield(input, class1, class2){
@@ -40,6 +41,18 @@ window.addEventListener("load", () => {
             validfield(surname, "invalid-field", "valid-field");
         }
         surnamep.innerText = errores.surname;
+    });
+
+    country.addEventListener("input", () => {
+        let countryp = document.querySelector(".countryp");
+        if (country.value.length < 2) {
+            errores.country = "País invalido";
+            validfield(country, "valid-field", "invalid-field");
+        } else if (country.value.length >= 2) {
+            errores.country = "";
+            validfield(country, "invalid-field", "valid-field");
+        }
+        countryp.innerText = errores.country;
     });
 
     radioButtons.forEach(radio => { radio.addEventListener("change", () => {
@@ -120,7 +133,7 @@ window.addEventListener("load", () => {
             document.querySelector(".genderp").innerText = errores.gender;
         }
         
-        notEmpty("avatarFile", uploadAvatar, ".avatarFilep");
+        notEmpty("country", country, ".countryp");
         notEmpty("email", email, ".emailp");
         notEmpty("password", contraseña, ".passwordp");
         notEmpty("repassword", confirmarContraseña, ".repasswordp");
