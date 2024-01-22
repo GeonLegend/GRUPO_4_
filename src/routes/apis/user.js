@@ -3,8 +3,8 @@ const user = require("../../controllers/apis/user");
 
 const router = express.Router();
 
-router.get("/:id", user.detail);
 router.get("/userLast", user.createdLast);
+router.get("/:id", user.detail);
 
 module.exports = router;
 
