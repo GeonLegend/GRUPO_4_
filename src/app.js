@@ -12,6 +12,7 @@ const rutaProduct = require("./routes/products.js");
 const rutaUser = require("./routes/users.js");
 const productApi = require("./routes/apis/products.js");
 const countApi = require("./routes/apis/totals.js");
+const userApi = require("./routes/apis/user.js");
 const userIsLogged = require('./middlewares/userIsLogged.js');
 
 const exp = require('constants');
@@ -50,6 +51,7 @@ app.use("/product", rutaProduct);
 app.use("/user", rutaUser);
 app.use("/api/", countApi);
 app.use("/api/product", productApi);
+app.use("/api/user", userApi);
 
 /* Comandos para instalar los modulos */
 /* npm init */
