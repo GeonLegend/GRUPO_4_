@@ -19,7 +19,7 @@ const homeControlador = {
         });
 
         res.render('products', { products })
-    }
+    },
 };
 
 module.exports = homeControlador;

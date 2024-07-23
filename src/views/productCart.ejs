@@ -3,6 +3,7 @@
 <head>
     <%- include("./partials/head", { title: "Carrito "}) %>
     <link rel="stylesheet" href="/css/cart.css">
+    <script src="../js/cart.js"></script>
 </head>
 
 <body>
@@ -17,36 +18,50 @@
                 <div class="cart-pedidos__titulo">
                     <h2>Productos</h2>
                 </div>
-                <div class="cart-pedidos__items">
-                    <section class="cart-item">
-                        <article class="cart-item__producto">
-                            <div class="producto-img">
-                                <img src="/images/products/playstation5.jpg" alt="imagen del producto" width="100%"
-                                    height="100%">
-                            </div>
-                            <div class="producto-custom">
-                                <h3 class="producto-titulo">Titulo del producto</h3>
-                                <p class="producto-descripcion">Descripcion del producto</p>
-                                <div class="producto-opciones">
-                                    <p>Eliminar</p>
-                                    <p>Guardar</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="cart-item__cantidad">
-                            <button>
-                                <p>-</p>
-                            </button>
-                            <span>0</span>
-                            <button>
-                                <p>+</p>
-                            </button>
-                        </article>
-                        <article class="cart-item__precio">
-                            <p>$00.00</p>
-                        </article>
-                    </section>
-                </div>
+
+                <% if (locals.cart) {%>
+                    <% cart.forEach(product => {%>
+                        <div class="cart-pedidos__items">
+                            <section class="cart-item">
+                                <article class="cart-item__producto">
+                                    <div class="producto-img">
+                                        <img src="/images/products/<%= product["productosDelCarrito.image"] %>" alt="imagen del producto" width="100%" height="100%">
+                                    </div>
+                                    <div class="producto-custom">
+                                        <h3 class="producto-titulo"><%= product["productosDelCarrito.name"] %></h3>
+                                        <p class="producto-descripcion">Descripcion del producto</p>
+                                        <div class="producto-opciones">
+                                            <a href="/cart/delete/<%= product["productosDelCarrito.id"] %>">
+                                                Eliminar
+                                            </a>
+                                            <p>Guardar</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cart-item__cantidad">
+                                    <!-- Sumar o resta de a uno -->
+                                    <a href="/cart/deleteOne/<%= product["productosDelCarrito.id"] %>">
+                                        <button class="btn-deleteOne">
+                                            -
+                                        </button>
+                                    </a>
+                                    <span><%= product["productosDelCarrito.CartProduct.number"] %></span>
+                                    <a href="/cart/addOne/<%= product["productosDelCarrito.id"] %>">
+                                        <button class="btn-addOne">
+                                            +
+                                        </button>
+                                    </a>
+                                </article>
+                                <article class="cart-item__precio">
+                                    <!-- PRECIO -->
+                                    <p>$<%= (product["productosDelCarrito.price"])* product["productosDelCarrito.CartProduct.number"] %></p>
+                                </article>
+                            </section>
+                        </div>
+
+                    <% })  %>
+                <% }; %>
+                
             </div>
 
             <div class="cart-detalles">
@@ -54,46 +69,93 @@
                     <div class="resumen-pedido__item">
                         <h3>Resumen del pedido</h3>
                     </div>
-                    <div class="resumen-pedido__item">
-                        <div>
-                            <p>Productos (0)</p>
-                            <p>Descuento</p>
+                    <% if(locals.cart){ %>
+                        <!-- Declaro algunas variables para mejor manejo -->
+                        <% let descuentoTotal = cart.reduce((sum, item) => { return sum + ((item["productosDelCarrito.discount"]*item["productosDelCarrito.price"]/100) * (item["productosDelCarrito.CartProduct.number"])); }, 0) %>
+                        <% let precioTotal = cart.reduce((sum, item) => { return sum + (item["productosDelCarrito.price"] * item["productosDelCarrito.CartProduct.number"]); }, 0);  %>
+                        <% let precioFinal = precioTotal - descuentoTotal %>
+
+                        <div class="resumen-pedido__item">
+                            <div>
+                                <!-- Recorre el array con reduce teniendo un acumulador y el item del array -->
+                                <p>Productos (
+                                    <%= cart.reduce((sum, item) => {
+                                    return sum + (1 * item["productosDelCarrito.CartProduct.number"]);
+                                    }, 0); %>)</p>
+                                <p>Descuento</p>
+                            </div>
+                            <div>
+                                <p> $<%= precioTotal %> </p>
+                                <p> $-<%= descuentoTotal %> </p>
+                            </div>
                         </div>
-                        <div>
+                        <div class="resumen-pedido__item">
+                            <div class="resumen-pedido__item-search">
+                                <input type="search" name="" id="" placeholder="Código de cupon" class="item-search">
+                                <button class="pedido-btn">Aplicar</button>
+                                <p>$-00.00</p>
+                            </div>
+                        </div>
+                        <div class="resumen-pedido__item">
+                            <div class="resumen-pedido__item-search">
+                                <input type="search" name="" id="" placeholder="Ingresa código postal" class="item-search">
+                                <button class="pedido-btn">Aplicar</button>
+                            </div>
+                            <p>Envío</p>
                             <p>$00.00</p>
-                            <p>$-00.00</p>
                         </div>
-                    </div>
-                    <div class="resumen-pedido__item">
-                        <div class="resumen-pedido__item-search">
-                            <input type="search" name="" id="" placeholder="Código de cupon" class="item-search">
-                            <button class="pedido-btn">Aplicar</button>
-                            <p>$-00.00</p>
+                        <div class="resumen-pedido__item resumen-total">
+                            <p>Total: </p>
+                            <p>$ <%= precioFinal %> </p>
                         </div>
-                    </div>
-                    <div class="resumen-pedido__item">
-                        <div class="resumen-pedido__item-search">
-                            <input type="search" name="" id="" placeholder="Ingresa código postal" class="item-search">
-                            <button class="pedido-btn">Aplicar</button>
+                        <div class="resumen-pedido__item">
+                            <button class="comprar-btn">
+                                Finalizar compra
+                            </button>
                         </div>
-                        <p>Envío</p>
-                        <p>$00.00</p>
-                    </div>
-                    <div class="resumen-pedido__item resumen-total">
-                        <p>Total: </p>
-                        <p>$00.00</p>
-                    </div>
-                    <div class="resumen-pedido__item">
-                        <button class="comprar-btn">
-                            Finalizar compra
-                        </button>
-                    </div>
+                    <% } else { %>
+                        <div class="resumen-pedido__item">
+                            <div>
+                                <!-- Recorre el array con reduce teniendo un acumulador y el item del array -->
+                                <p>Productos (0)</p>
+                                <p>Descuento</p>
+                            </div>
+                            <div>
+                                <p>$00.00</p>
+                                <p>$-00.00</p>
+                            </div>
+                        </div>
+                        <div class="resumen-pedido__item">
+                            <div class="resumen-pedido__item-search">
+                                <input type="search" name="" id="" placeholder="Código de cupon" class="item-search">
+                                <button class="pedido-btn">Aplicar</button>
+                                <p>$-00.00</p>
+                            </div>
+                        </div>
+                        <div class="resumen-pedido__item">
+                            <div class="resumen-pedido__item-search">
+                                <input type="search" name="" id="" placeholder="Ingresa código postal" class="item-search">
+                                <button class="pedido-btn">Aplicar</button>
+                            </div>
+                            <p>Envío</p>
+                            <p>$00.00</p>
+                        </div>
+                        <div class="resumen-pedido__item resumen-total">
+                            <p>Total: </p>
+                            <p>$00.00</p>
+                        </div>
+                        <div class="resumen-pedido__item">
+                            <button class="comprar-btn">
+                                Finalizar compra
+                            </button>
+                        </div>
+                    <% } %>
                 </div>
 
                 <div class="mas-productos">
-                    <button class="mas-productos-btn">
+                    <a href="/product/" class="mas-productos-btn">
                         Agregar más productos
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

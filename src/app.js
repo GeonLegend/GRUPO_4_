@@ -19,7 +19,7 @@ const exp = require('constants');
 
 const PORT = process.env.PORT || 4444;
 
-app.listen(PORT, console.log('Escuchándo en el puerto ' + PORT));
+app.listen(PORT, console.log('Iniciando http://localhost:' + PORT));
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
 
@@ -35,7 +35,7 @@ app.use(session({
 }));
 app.use(cookies());
 
-/* Verifica si el usuario esta logueado y guarda el dato en sesion */
+/* Verifica si hay datos el cokkies. Y si los hay inicia sesion automaticamente y guarda user en sesion */
 app.use(userIsLogged);
 
 /* Aceptar politicas de nose del sevidor para las apis */
@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 
   /* RUTAS */
 app.use('/', rutasHome);
-app.use('/carrito', rutasCarrito);
+app.use('/cart', rutasCarrito);
 app.use("/product", rutaProduct);
 app.use("/user", rutaUser);
 app.use("/api/", countApi);

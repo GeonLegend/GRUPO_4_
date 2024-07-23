@@ -1,5 +1,5 @@
 const express = require('express');
-const multer = require('../middlewares/multerProduct.js')
+const multer = require('../middlewares/multer.js')
 const router = express.Router();
 const productController = require('../controllers/productController.js');
 

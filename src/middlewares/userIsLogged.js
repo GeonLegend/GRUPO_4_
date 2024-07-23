@@ -1,5 +1,5 @@
 const db = require("../database/models");
-const bcryptjs = require('bcryptjs');
+/* Middleware para el inicio de sesion automatico si hay datos guardados en la cookie */
 
 module.exports = async (req, res, next) => {
     let emailCookie = req.cookies.userEmail;
@@ -14,10 +14,10 @@ module.exports = async (req, res, next) => {
         });
         req.session.userRol = await db.UserType.findByPk(user.idUserType);
         req.session.user = user;
-    }
+    };
     
     if(req.session.user)  {
         res.locals.user = req.session.user;
-    } 
+    };
     next();
 }

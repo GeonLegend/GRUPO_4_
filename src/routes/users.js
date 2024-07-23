@@ -1,7 +1,10 @@
+/* Controladores */
 const userController = require("../controllers/userController");
 const dbUserController = require("../controllers/dbControllers.js/userController");
 const express = require('express');
-const multer = require("../middlewares/multerUser");
+
+/* Middlewares */
+const multer = require("../middlewares/multer");
 const registerValidations = require("../middlewares/expressRegisterValidator");
 const loginValidations = require("../middlewares/expressLoginValidator");
 const guest = require('../middlewares/guest');
@@ -19,6 +22,5 @@ router.get('/logout', dbUserController.logout);
 router.get('/userProfile', auth, dbUserController.userDetail);
 router.get('/userProfile/edit', auth, dbUserController.editView);
 router.put('/userProfile/edit', dbUserController.edit);
-
 
 module.exports = router;

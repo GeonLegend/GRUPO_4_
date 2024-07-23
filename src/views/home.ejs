@@ -106,9 +106,11 @@
                 <% products.forEach(product => { %>
                     <% if(!product.discount){ %>
                     <section class="card">
-                        <a href="/product/<%=product.id%>" class="section-card">
+                        <div class="section-card">
                             <article class="section-card__img">
-                                <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                                <a href="/product/<%=product.id%>">
+                                    <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                                </a>
                             </article>
                             <article class="section-card__title">
                                 <h3><%= product.name %></h3>
@@ -116,12 +118,15 @@
                             <article class="section-card__price">
                                 <p>$ <%= product.price %></p>
                             </article>
+
                             <article class="section-card__btn">
-                                <button class="card-btn">
-                                    AGREGAR AL CARRITO
-                                </button>
+                                <a href="/cart/<%= product.id %>">
+                                    <button class="card-btn">
+                                            AGREGAR AL CARRITO
+                                    </button>
+                                </a>
                             </article>
-                        </a>
+                        </div>
                     </section>
                     <% }; %>
                 <% }); %>
@@ -133,9 +138,11 @@
                 <% products.forEach(product => { %>
                     <% if(product.discount){ %>
                     <section class="card">
-                        <a href="/product/<%=product.id%>" class="section-card">
+                        <div class="section-card">
                             <article class="section-card__img">
-                                <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                                <a href="/product/<%=product.id%>">
+                                    <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                                </a>
                             </article>
                             <article class="section-card__title">
                                 <h3><%= product.name %></h3>
@@ -150,11 +157,13 @@
                                 <p>$ <%= product.price - (product.price*product.discount/100) %></p>
                             </article>
                             <article class="section-card__btn">
-                                <button class="card-btn">
-                                    AGREGAR AL CARRITO
-                                </button>
+                                <a href="/cart/<%= product.id %>">
+                                    <button class="card-btn">
+                                        AGREGAR AL CARRITO
+                                    </button>
+                                </a>
                             </article>
-                        </a>
+                        </div>
                     </section>
                     <% }; %>
                 <% }); %>

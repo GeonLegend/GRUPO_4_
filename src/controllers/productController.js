@@ -1,5 +1,6 @@
 const path = require("path");
 const productModel = require("../data/model");
+const { emitWarning } = require("process");
 
 products = productModel.getProduct();
 
@@ -55,7 +56,8 @@ const productController = {
         const actuProductos = products.filter((producto) => producto.id != id);
         productModel.writeProducts(actuProductos);
         res.redirect("/product/lista-de-productos");
-    }
+    },
+
 };
 
 module.exports = productController;
